@@ -21,125 +21,123 @@ body {
   row-gap: 25px;
 }
 
-@media only screen and (max-width: 320px) {
-  /*header*/
-  .itinerary__header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  .itinerary__header--icon {
-    font-size: 27.5px;
-    color: #b5b5b5d5;
-  }
-  .itinerary__header--label {
-    font-size: 18px;
-    font-weight: 600;
-  }
+/*header*/
+.itinerary__header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.itinerary__header--icon {
+  font-size: 27.5px;
+  color: #b5b5b5d5;
+}
+.itinerary__header--label {
+  font-size: 18px;
+  font-weight: 600;
+}
 
-  /*main*/
-  .itinerary__main {
-    display: block;
-  }
-  /*card-item*/
-  .itinerary__main--card-item {
-    margin: 12.5px 0px;
-    display: flex;
-    align-items: center;
-    overflow: auto;
-    white-space: nowrap;
-    padding: 15px 0px;
-    column-gap: 15px;
-    text-decoration: none;
-    list-style-type: none;
-  }
-  .main__card-item {
-    border-radius: 10px;
-    padding: 0px 20px;
-    box-shadow: var(--color-card-shadow) 0px 4px 6px 0px;
-  }
-  .card-selected {
-    color: var(--color-white-linea);
-    background-color: var(--color-blue-linea);
-  }
-  .main__card-item--title {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--color-card-title);
-  }
-  .title-selected {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--color-white-linea);
-  }
-  .main__card-item--subTitle {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--color-card-subTitle);
-  }
-  .subTitle-selected {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--color-white-linea);
-  }
+/*main*/
+.itinerary__main {
+  display: block;
+}
+/*card-item*/
+.itinerary__main--card-item {
+  margin: 12.5px 0px;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 15px 0px;
+  column-gap: 15px;
+  text-decoration: none;
+  list-style-type: none;
+}
+.main__card-item {
+  border-radius: 10px;
+  padding: 0px 20px;
+  box-shadow: var(--color-card-shadow) 0px 4px 6px 0px;
+}
+.card-selected {
+  color: var(--color-white-linea);
+  background-color: var(--color-blue-linea);
+}
+.main__card-item--title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-card-title);
+}
+.title-selected {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-white-linea);
+}
+.main__card-item--subTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-card-subTitle);
+}
+.subTitle-selected {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-white-linea);
+}
 
-  /*info-travel*/
-  /* .main__info-travel {
-    row-gap: 0px;
-  } */
-  .itinerary__main--info-travel {
-    margin: 25px 0px;
-  }
-  .main__info-travel--hour-type {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .hour-type--hour {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--color-red-linea);
-  }
-  .hour-type--type {
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--colo-info-type);
-  }
-  .main__info-travel--lap {
-    font-size: 10px;
-    font-weight: 300;
-  }
-  .main__info-travel--go-lap {
-    margin: 15px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .info-travel__go-lap {
-    display: flex;
-    align-items: center;
-    column-gap: 15px;
-    margin: 15px 0px;
-  }
-  .info-travel__go-lap--icon {
-    font-size: 24px;
-    color: #b5b5b5d5;
-  }
+/*info-travel*/
+/* .main__info-travel {
+  row-gap: 0px;
+} */
+.itinerary__main--info-travel {
+  margin: 25px 0px;
+}
+.main__info-travel--hour-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hour-type--hour {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-red-linea);
+}
+.hour-type--type {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--colo-info-type);
+}
+.main__info-travel--lap {
+  font-size: 10px;
+  font-weight: 300;
+}
+.main__info-travel--go-lap {
+  margin: 15px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.info-travel__go-lap {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  margin: 15px 0px;
+}
+.info-travel__go-lap--icon {
+  font-size: 24px;
+  color: #b5b5b5d5;
+}
 
-  .info-travel__go-lap--title {
-    color: var(--color-black-A);
-    font-size: 14px;
-    font-weight: 400;
-  }
-  .info-travel__go-lap--subtitle {
-    color: var(--color-gray-A);
-    font-size: 10px;
-    font-weight: 500;
-  }
+.info-travel__go-lap--title {
+  color: var(--color-black-A);
+  font-size: 14px;
+  font-weight: 400;
+}
+.info-travel__go-lap--subtitle {
+  color: var(--color-gray-A);
+  font-size: 10px;
+  font-weight: 500;
+}
 
-  .go-lap__icon {
-    font-size: 24px;
-    color: var(--color-red-linea);
-    transform: rotate(90deg);
-  }
+.go-lap__icon {
+  font-size: 24px;
+  color: var(--color-red-linea);
+  transform: rotate(90deg);
 }
