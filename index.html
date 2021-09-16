@@ -2,45 +2,77 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
+        rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
     <title>New web view</title>
 </head>
 
 <body>
     <header class="itinerary__header">
-        <i class='bx bx-bus itinerary__header--icon'></i>
+        <i class="bx bx-bus itinerary__header--icon"></i>
         <p class="itinerary__header--label">TRUJILLO - HUARAZ</p>
     </header>
     <main class="itinerary__main">
-        <section class="itinerary__main--card-item">
-            <div class="main__card-item card-selected">
+        <ul class="itinerary__main--card-item">
+            <li class="main__card-item card-selected">
                 <p class="main__card-item--title title-selected">Sáb 18 Ago</p>
                 <p class="main__card-item--subTitle subTitle-selected">S/. 70.00</p>
-            </div>
-            <div class="main__card-item">
-                <p class="main__card-item--title ">Sáb 18 Ago</p>
+            </li>
+            <li class="main__card-item">
+                <p class="main__card-item--title">Sáb 18 Ago</p>
                 <p class="main__card-item--subTitle">S/. 70.00</p>
-            </div>
-            <div class="main__card-item">
-                <p class="main__card-item--title ">Sáb 18 Ago</p>
+            </li>
+            <li class="main__card-item">
+                <p class="main__card-item--title">Sáb 18 Ago</p>
                 <p class="main__card-item--subTitle">S/. 70.00</p>
-            </div>
-            <div class="main__card-item">
-                <p class="main__card-item--title ">Sáb 18 Ago</p>
+            </li>
+            <li class="main__card-item">
+                <p class="main__card-item--title">Sáb 18 Ago</p>
                 <p class="main__card-item--subTitle">S/. 70.00</p>
+            </li>
+        </ul>
+        <section class="itinerary__main--info-travel">
+            <div class="main__info-travel">
+                <div class="main__info-travel--hour-type">
+                    <label class="hour-type--hour">9:45 PM</label>
+                    <label class="hour-type--type">VIP</label>
+                </div>
+                <label class="main__info-travel--lap">1 Parada intermedia</label>
             </div>
-            <div class="main__card-item">
-                <p class="main__card-item--title ">Sáb 18 Ago</p>
-                <p class="main__card-item--subTitle">S/. 70.00</p>
+            
+        </section>
+        <section class="main__info-travel--go-lap">
+            <div>
+                <div class="info-travel__go-lap">
+                    <i class="bx bx-bus info-travel__go-lap--icon"></i>
+                    <div >
+                        <label class="info-travel__go-lap--title">Trujillo</label>
+                        <br>
+                        <label class="info-travel__go-lap--subtitle">Av. America Sur Nro 2857</label>
+                    </div>
+                </div>
+                <div class="info-travel__go-lap"> 
+                    <i class="bx bx-location-plus info-travel__go-lap--icon"></i>
+                    <div >
+                        <label class="info-travel__go-lap--title">Huaraz</label>
+                        <br>
+                        <label class="info-travel__go-lap--subtitle">JR. Simon Bolivar Nº 450</label>
+                    </div>
+                </div>
+            </div>
+            <i class='bx bx-transfer-alt go-lap__icon' ></i> 
+        </section>
+        <section class="main__info-travel--cards">
+            <div>
+
             </div>
         </section>
     </main>
