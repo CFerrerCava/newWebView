@@ -13,6 +13,9 @@
   --color-black-A: #404040;
   --color-gray-A: #8e8e8e;
   --color-gray-B: #5a5a5a;
+  --color-gray-C: #f3f3f3;
+  --color-gray-D: #c9c9c9;
+  --color-gray-E: #9d9d9d;
 }
 
 body {
@@ -48,7 +51,7 @@ body {
   align-items: center;
   overflow: auto;
   white-space: nowrap;
-  padding: 15px 0px;
+  padding: 15px 10px 15px 0px;
   column-gap: 15px;
   text-decoration: none;
   list-style-type: none;
@@ -211,4 +214,67 @@ body {
 .cards__part-3--icon {
   font-size: 20px;
   color: #b5b5b5d5;
+}
+
+/*flat choosing*/
+.change-font-flat {
+  font-size: 13px;
+  font-weight: 700;
+}
+.large {
+  width: 50px;
+  text-align: center;
+}
+.reduce-padding {
+  margin: 0px 0px;
+}
+.flat__states {
+  margin: 25px 0px;
+  list-style-type: none;
+  padding: 0px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.flat__states--state {
+  display: grid;
+  justify-items: center;
+  /* display: flex;
+  align-items: center; */
+}
+.state__icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  border: solid 0.5px var(--color-gray-D);
+  margin: 0px 5px 0px 0px;
+  background-color: var(--color-white-linea);
+}
+.state__icon--busy {
+  border: solid 0.5px var(--color-gray-C);
+  background-color: var(--color-gray-C);
+}
+.state__icon--selected {
+  border: solid 0.5px var(--color-blue-linea);
+  background-color: var(--color-blue-linea);
+}
+
+/*bus*/
+.flat__bus--row {
+  display: flex;
+}
+.flat__bus--sit {
+  margin: 5px 1px;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  border: solid 0.5px var(--color-gray-E);
+  padding: 5px 15px;
+  display: grid;
+  justify-items: center;
+  background-image: url(images/chair.png);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  font-size: 15px;
+  font-weight: 600;
 }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>New web view</title>
+</head>
+
+<body>
+    <main class="itinerary__main">
+        <section>
+            <label class="itinerary__header--label change-font-flat">Pisos</label>
+            <ul class="itinerary__main--card-item reduce-padding">
+                <li class="main__card-item card-selected large">
+                    <p class="main__card-item--title title-selected">1</p>
+                </li>
+                <li class="main__card-item large">
+                    <p class="main__card-item--title">2</p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <label class="itinerary__header--label change-font-flat">Precios</label>
+            <ul class="itinerary__main--card-item reduce-padding">
+                <li class="main__card-item card-selected large">
+                    <p class="main__card-item--title title-selected">Todos</p>
+                </li>
+                <li class="main__card-item large">
+                    <p class="main__card-item--title">S/. 70</p>
+                </li>
+                <li class="main__card-item large">
+                    <p class="main__card-item--title">S/. 75</p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <ul class="flat__states">
+                <li class="flat__states--state">
+                    <i class=" state__icon state__icon--busy"></i>
+                    <label class="itinerary__header--label change-font-flat">Ocupado</label>
+                </li>
+                <li class="flat__states--state">
+                    <i class=" state__icon"></i>
+                    <label class="itinerary__header--label change-font-flat">Disponible</label>
+                </li>
+                <li class="flat__states--state">
+                    <i class=" state__icon state__icon--selected"></i>
+                    <label class="itinerary__header--label change-font-flat">Seleccionado</label>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <table class=" flat__bus">
+
+            </table>
+        </section>
+    </main>
+    <template>
+        <td class=" flat__bus--sit">
+            <label>1</label>
+        </td>
+    </template>
+    <template>
+        <tr class=" flat__bus--row">
+
+        </tr>
+    </template>
+</body>
+<script src="js.js"></script>
+
+</html>
