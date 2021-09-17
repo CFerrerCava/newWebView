@@ -16,6 +16,7 @@
   --color-gray-C: #f3f3f3;
   --color-gray-D: #c9c9c9;
   --color-gray-E: #9d9d9d;
+  --color-gray-F: #e8e8e8;
 }
 
 body {
@@ -250,8 +251,8 @@ body {
   background-color: var(--color-white-linea);
 }
 .state__icon--busy {
-  border: solid 0.5px var(--color-gray-C);
-  background-color: var(--color-gray-C);
+  border: solid 0.5px var(--color-gray-F);
+  background-color: var(--color-gray-F);
 }
 .state__icon--selected {
   border: solid 0.5px var(--color-blue-linea);
@@ -275,10 +276,33 @@ body {
   padding: 5px 15px;
   display: grid;
   justify-items: center;
-  background-image: url(images/chair.png);
+
   background-repeat: no-repeat;
   background-position: center;
 
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
+  text-align: center;
+}
+.chair-img {
+  background-image: url(images/chair.png);
+}
+
+.lader-img {
+  background-image: url(images/lader.png);
+}
+.tv-img {
+  background-image: url(images/tv.png);
+  border: none;
+}
+.pass-img {
+  border: none;
+}
+.bussy-pj {
+  background-color: var(--color-gray-F);
+}
+.back {
+  /* width: 0%; */
+  margin: 0px 0px 0px 5px;
+  text-align: left;
 }
