@@ -30,9 +30,6 @@ const buildSits = () => {
             //append a sit in row
             _row.appendChild(cloneSit);
         }
-        
-        
-        
     }
 };
 

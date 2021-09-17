@@ -259,6 +259,10 @@ body {
 }
 
 /*bus*/
+.flat__bus-center {
+  display: flex;
+  justify-content: center;
+}
 .flat__bus--row {
   display: flex;
 }
