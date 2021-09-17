@@ -118,12 +118,17 @@ body {
 .info-travel__go-lap {
   display: flex;
   align-items: center;
-  column-gap: 15px;
+  justify-content: space-between;
+  /* column-gap: 15px; */
   margin: 15px 0px;
+}
+.info-travel__go-lap--info {
+  width: 100%;
 }
 .info-travel__go-lap--icon {
   font-size: 24px;
   color: #b5b5b5d5;
+  margin: 0px 10px 0px 0px;
 }
 
 .info-travel__go-lap--title {
