@@ -302,9 +302,11 @@ body {
   background-color: var(--color-gray-F);
 }
 .back {
-  /* width: 0%; */
   margin: 0px 0px 0px 5px;
   text-align: left;
+}
+.selected-chair {
+  background-color: var(--color-blue-linea);
 }
 .padding {
   margin: 0px 0px 20px 0px;
