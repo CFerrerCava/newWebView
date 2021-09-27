@@ -119,6 +119,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  column-gap: 5px;
 }
 .info-travel__go-lap {
   display: flex;
@@ -149,7 +150,7 @@ body {
 }
 
 .go-lap__icon {
-  font-size: 24px;
+  font-size: 20px;
   color: var(--color-red-linea);
   transform: rotate(90deg);
 }
