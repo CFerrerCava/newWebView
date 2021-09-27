@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
     <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style_2.css" />
     <title>New web view</title>
 </head>
 
@@ -39,62 +39,65 @@
                 <p class="main__card-item--subTitle">S/. 70.00</p>
             </li>
         </ul>
-        <section class="itinerary__main--info-travel">
-            <div class="main__info-travel">
-                <div class="main__info-travel--hour-type">
-                    <label class="hour-type--hour">9:45 PM</label>
-                    <label class="hour-type--type">VIP</label>
-                </div>
-                <label class="main__info-travel--lap">1 Parada intermedia</label>
-            </div>
-        </section>
-        <section class="main__info-travel--go-lap">
-            <div class="info-travel__go-lap--info">
-                <div class="info-travel__go-lap">
-                    <i class="bx bx-bus info-travel__go-lap--icon"></i>
-                    <div class="info-travel__go-lap--info">
-                        <label class="info-travel__go-lap--title">Trujillo</label>
-                        <br />
-                        <label class="info-travel__go-lap--subtitle">Av. America Sur Nro 2857</label>
-                    </div>
-                </div>
-                <div class="info-travel__go-lap">
-                    <i class="bx bx-location-plus info-travel__go-lap--icon"></i>
-                    <div class="info-travel__go-lap--info">
-                        <label class="info-travel__go-lap--title">Huaraz</label>
-                        <br />
-                        <label class="info-travel__go-lap--subtitle">JR. Simon Bolivar Nº 450</label>
-                    </div>
-                </div>
-            </div>
-            <i class="bx bx-transfer-alt go-lap__icon"></i>
-        </section>
-        <section class="main__info-travel--cards">
-            <ul class="cards">
-                <li class="cards__part-1">
-                    <div class="cards__part-1--info-A">
-                        <label class="info-A__flat">Piso 1 </label>
-                        <label class="info-A__flat-open">1 libres</label>
-                    </div>
-                    <label class="cards__part-1--info-B">Desde S/. 70</label>
-                </li>
-                <li class="cards__part-2">
-                    <label class="cards__part-2--title">Servicios</label>
 
-                    <ul id="list-services" class="cards__part-2--list-images">
-                        <li><img src="images/image_1.png" alt=""></li>
-                        <li><img src="images/image_2.png" alt=""></li>
-                        <li><img src="images/image_3.png" alt=""></li>
-                        <li><img src="images/image_4.png" alt=""></li>
-                        <li><img src="images/image_5.png" alt=""></li>
-                        <li><img src="images/image_6.png" alt=""></li>
-                    </ul>
-                </li>
-                <li class="cards__part-3">
+
+        <section class="main__info-travel--cards">
+            <div class="cards">
+                <section class="itinerary__main--info-travel">
+                    <div class="main__info-travel">
+                        <div class="main__info-travel--hour-type">
+                            <label class="hour-type--hour">9:45 PM</label>
+                            <label class="hour-type--type">VIP</label>
+                        </div>
+                        <label class="main__info-travel--lap">1 Parada intermedia</label>
+                    </div>
+                </section>
+                <div class="flex">
+                    <section class="main__info-travel--go-lap">
+                        <div class="info-travel__go-lap--info">
+                            <div class="info-travel__go-lap">
+                                <div class="info-travel__go-lap--info">
+                                    <label class="info-travel__go-lap--title">Trujillo</label>
+                                    <label class="info-travel__go-lap--subtitle">Av. America Sur Nro 2857</label>
+                                </div>
+                            </div>
+                            <div class="info-travel__go-lap">
+                                <div class="info-travel__go-lap--info">
+                                    <label class="info-travel__go-lap--title">Huaraz</label>
+                                    <label class="info-travel__go-lap--subtitle">JR. Simon Bolivar Nº 450</label>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <hr class="hr-class">
+                    <section class="cards__part-1">
+                        <div class="info-travel__go-lap">
+                            <div class="info-travel__go-lap--info">
+                                <div class="cards__part-1--info-A">
+                                    <label class="info-A__flat">Piso 1 </label>
+                                    <label class="info-A__flat-open">1 libres</label>
+                                </div>
+                                <label class="info-travel__go-lap--subtitle">Desde S/. 70 <label
+                                        class=" cards__part-1--info-B--color">Piso 1 </label></label>
+                            </div>
+                        </div>
+                        <div class="info-travel__go-lap">
+                            <div class="info-travel__go-lap--info">
+                                <div class="cards__part-1--info-A">
+                                    <label class="info-A__flat">Piso 1 </label>
+                                    <label class="info-A__flat-open">1 libres</label>
+                                </div>
+                                <label class="info-travel__go-lap--subtitle">Desde S/. 70 <label
+                                        class=" cards__part-1--info-B--color">Piso 1 </label></label>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <section class="cards__part-3">
                     <a class="cards__part-3--title" href="flat.html">Elegir asientos</a>
                     <i class="bx bx-chevron-right cards__part-3--icon"></i>
-                </li>
-            </ul>
+                </section>
+            </div>
         </section>
     </main>
 </body>
