@@ -139,12 +139,12 @@ body {
 
 .info-travel__go-lap--title {
   color: var(--color-black-A);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
 }
 .info-travel__go-lap--subtitle {
   color: var(--color-gray-A);
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 500;
 }
 
@@ -188,7 +188,7 @@ body {
   color: var(--color-gray-B);
 }
 .cards__part-1--info-B--color {
-  font-size: 7px;
+  font-size: 10px;
   font-weight: 700;
   color: var(--color-card-title);
 }
