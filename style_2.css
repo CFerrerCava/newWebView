@@ -1,0 +1,327 @@
+:root {
+  /*fonts*/
+  --font--family: "Poppins", sans-serif;
+  /*colors*/
+  --color-white-linea: #ffffff;
+  --color-blue-linea: #347cbe;
+  --color-body-linea: #fcfcfc;
+  --color-card-shadow: #6f6f6f1e;
+  --color-card-subTitle: #959595;
+  --color-card-title: #333333;
+  --color-red-linea: #be3434;
+  --colo-info-type: #6b6b6b;
+  --color-black-A: #404040;
+  --color-gray-A: #8e8e8e;
+  --color-gray-B: #5a5a5a;
+  --color-gray-C: #f3f3f3;
+  --color-gray-D: #c9c9c9;
+  --color-gray-E: #9d9d9d;
+  --color-gray-F: #e8e8e8;
+}
+
+body {
+  padding: 25px 15px;
+  font-family: var(--font--family);
+  background-color: var(--color-body-linea);
+  row-gap: 25px;
+}
+
+/*header*/
+.itinerary__header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.itinerary__header--icon {
+  font-size: 27.5px;
+  color: #b5b5b5d5;
+}
+.itinerary__header--label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/*main*/
+.itinerary__main {
+  display: block;
+}
+/*card-item*/
+.itinerary__main--card-item {
+  margin: 12.5px 0px;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 15px 10px 15px 0px;
+  column-gap: 15px;
+  text-decoration: none;
+  list-style-type: none;
+}
+.main__card-item {
+  border-radius: 10px;
+  padding: 0px 20px;
+  box-shadow: var(--color-card-shadow) 0px 4px 6px 0px;
+}
+.card-selected {
+  color: var(--color-white-linea);
+  background-color: var(--color-blue-linea);
+}
+.main__card-item--title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-card-title);
+}
+.title-selected {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-white-linea);
+}
+.main__card-item--subTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-card-subTitle);
+}
+.subTitle-selected {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-white-linea);
+}
+
+/*info-travel*/
+/* .main__info-travel {
+  row-gap: 0px;
+} */
+.itinerary__main--info-travel {
+  margin: 0px 0px;
+}
+.main__info-travel--hour-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hour-type--hour {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-red-linea);
+}
+.hour-type--type {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--colo-info-type);
+}
+.main__info-travel--lap {
+  font-size: 10px;
+  font-weight: 300;
+}
+.main__info-travel--go-lap {
+  margin: 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.info-travel__go-lap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* column-gap: 15px; */
+  margin: 5px 0px;
+}
+.info-travel__go-lap--info {
+  display: grid;
+  width: 100%;
+}
+.info-travel__go-lap--icon {
+  font-size: 24px;
+  color: #b5b5b5d5;
+  margin: 0px 10px 0px 0px;
+}
+
+.info-travel__go-lap--title {
+  color: var(--color-black-A);
+  font-size: 10px;
+  font-weight: 400;
+}
+.info-travel__go-lap--subtitle {
+  color: var(--color-gray-A);
+  font-size: 8px;
+  font-weight: 500;
+}
+
+.go-lap__icon {
+  font-size: 24px;
+  color: var(--color-red-linea);
+  transform: rotate(90deg);
+}
+
+/*Cards*/
+.cards {
+  display: grid;
+  padding: 20px 20px;
+  border-radius: 15px;
+  row-gap: 15px;
+  box-shadow: var(--color-card-shadow) 0px 4px 6px 0px;
+  list-style-type: none;
+  background-color: var(--color-white-linea);
+}
+.cards__part-1 {
+  display: grid;
+  width: 100%;
+}
+
+.cards__part-1--info-A {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info-A__flat {
+  font-size: 10px;
+  font-weight: 400;
+}
+.info-A__flat-open {
+  font-size: 10px;
+  font-weight: 500;
+}
+.cards__part-1--info-B {
+  font-size: 7px;
+  font-weight: 500;
+  color: var(--color-gray-B);
+}
+.cards__part-1--info-B--color {
+  font-size: 7px;
+  font-weight: 700;
+  color: var(--color-card-title);
+}
+.cards__part-2 {
+  display: grid;
+  row-gap: 10px;
+}
+.cards__part-2--title {
+  font-size: 12px;
+  font-weight: 600;
+}
+.cards__part-2--list-images {
+  display: flex;
+  list-style-type: none;
+  column-gap: 10px;
+  padding: 0px;
+}
+
+.cards__part-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cards__part-3--title {
+  width: 100%;
+  color: var(--color-red-linea);
+  font-size: 10px;
+  font-weight: 500;
+  text-align: right;
+}
+.cards__part-3--icon {
+  font-size: 20px;
+  color: #b5b5b5d5;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.hr-class {
+  margin: 0px 15px;
+  border: solid 0.5px #e1e1e1;
+}
+/*flat choosing*/
+.change-font-flat {
+  font-size: 13px;
+  font-weight: 700;
+}
+.large {
+  width: 50px;
+  text-align: center;
+}
+.reduce-padding {
+  margin: 0px 0px;
+}
+.flat__states {
+  margin: 25px 0px;
+  list-style-type: none;
+  padding: 0px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.flat__states--state {
+  display: grid;
+  justify-items: center;
+  /* display: flex;
+  align-items: center; */
+}
+.state__icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  border: solid 0.5px var(--color-gray-D);
+  margin: 0px 5px 0px 0px;
+  background-color: var(--color-white-linea);
+}
+.state__icon--busy {
+  border: solid 0.5px var(--color-gray-F);
+  background-color: var(--color-gray-F);
+}
+.state__icon--selected {
+  border: solid 0.5px var(--color-blue-linea);
+  background-color: var(--color-blue-linea);
+}
+
+/*bus*/
+.flat__bus-center {
+  display: flex;
+  justify-content: center;
+}
+.flat__bus--row {
+  display: flex;
+}
+.flat__bus--sit {
+  margin: 5px 1px;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  border: solid 0.5px var(--color-gray-E);
+  padding: 5px 15px;
+  display: grid;
+  justify-items: center;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+.chair-img {
+  background-image: url(images/chair.png);
+}
+
+.lader-img {
+  background-image: url(images/lader.png);
+}
+.tv-img {
+  background-image: url(images/tv.png);
+  border: none;
+}
+.pass-img {
+  border: none;
+}
+.bussy-pj {
+  background-color: var(--color-gray-F);
+}
+.back {
+  margin: 0px 0px 0px 5px;
+  text-align: left;
+}
+.selected-chair {
+  background-color: var(--color-blue-linea);
+}
+.padding {
+  margin: 0px 0px 20px 0px;
+}
