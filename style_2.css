@@ -215,7 +215,7 @@ body {
 .cards__part-3--title {
   width: 100%;
   color: var(--color-red-linea);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
   text-align: right;
 }
