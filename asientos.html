@@ -1,0 +1,590 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/form.css">
+    <style>
+    </style>
+
+
+</head>
+
+<body>
+    <form class="panel" role="form">
+        <div id="accordionPasajero1">
+            <div class="panel box box-default box-solid">
+                <div class="box-header with-border">
+                    <h4 class="box-title" onclick="VerificarCollapsed(this);" data-id="linkPasajero1">
+                        <a id="linkPasajero1" data-toggle="collapse" data-parent="#accordionPasajero1"
+                            href="#collapsePasajero1">
+                            <i class="icofont icofont-user pull-left p-l-15"></i>
+                            PASAJERO 1
+                        </a>
+                    </h4>
+
+                    <div class="box-tools pull-right">
+                        <button onclick="Collapsed(this);" data-id="linkPasajero1" type="button"
+                            class="btn btn-box-tool"><i class="fa fa-minus btnCollapsed"></i></button>
+                    </div>
+                </div>
+                <div id="collapsePasajero1" class="panel-collapse collapse in">
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <fieldset class="">
+                                    <legend class="text-muted legend_fs">
+                                        Datos del pasajero <span id="loadNroDoc1"></span>
+                                    </legend>
+
+                                    <div class="row">
+
+                                        <div class="form-group">
+                                            <!-- Detalles de los asientos del bus -->
+                                            <div class=" col-md-2 col-sm-6 col-xs-12 with-icon">
+
+                                                <select id="tipoDocPasajero1" class="custom-input" data-id="1"
+                                                    onchange="cambiarTipoDoc(this)">
+
+                                                    <option value="CRN">Carnet Extranjería</option>
+
+                                                    <option value="DNI" selected="">DNI</option>
+
+                                                    <option value="PAS">Pasaporte</option>
+
+                                                </select>
+                                                <input type="tel" class="custom-input" id="documentoPasajero1"
+                                                    name="documentoPasajero" placeholder="Nro. Documento" data-id="1"
+                                                    onkeyup="validarDocPasajero(this)"
+                                                    onchange="validarDocPasajero(this)">
+                                            </div>
+
+                                            <!-- <div class=" col-md-2 col-sm-6 col-xs-12">
+
+                                                <input type="tel" class="custom-input" id="documentoPasajero1"
+                                                    name="documentoPasajero" placeholder="Nro. Documento" data-id="1"
+                                                    onkeyup="validarDocPasajero(this)"
+                                                    onchange="validarDocPasajero(this)">
+                                            </div> -->
+
+                                            <div class=" col-md-4 col-sm-6 col-xs-12 with-icon">
+                                                <i class='bx bx-user'></i>
+                                                <input type="text" class="custom-input" id="nombrePasajero1"
+                                                    name="nombrePasajero" placeholder="Apellidos y Nombres">
+                                            </div>
+
+                                            <div class=" col-md-2 col-sm-6 col-xs-12 with-icon">
+                                                <i class='bx bx-group'></i>
+                                                <select id="sexoPasajero1" name="sexoPasajero"
+                                                    class="custom-input form-asientos">
+                                                    <option value="" selected="">Sexo</option>
+                                                    <option value="H">Hombre</option>
+                                                    <option value="M">Mujer</option>
+                                                </select>
+                                            </div>
+
+                                            <div class=" col-md-2 col-sm-4 col-xs-12 ">
+
+                                                <div class="input-group date  with-icon">
+                                                    <i class='bx bx-calendar'></i>
+                                                    <input readonly="readonly" type="text"
+                                                        class="custom-input form-asientos" id="fechaNacPasajero1"
+                                                        name="fechaNacPasajero" placeholder="Fecha de nacimiento"
+                                                        onchange="verificarEdadPas(this)" data-idedad="1">
+                                                    <!-- <div class="input-group-addon">
+                                                        <label for="fechaNacPasajero1"><i
+                                                                class="icofont icofont-ui-calendar"></i></label>
+                                                    </div> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        <div class="row ">
+                            <div class="col-md-6 col-sm-6 col-xs-12 p-top-10">
+                                <fieldset class="">
+                                    <legend class="text-muted legend_fs">
+                                        Datos de facturación
+                                        <span id="loadNroRuc1"></span>
+                                    </legend>
+
+                                    <div class="row  ">
+
+                                        <div class="  form-group">
+                                            <div class=" col-md-1 col-sm-1 col-xs-1" style="display: none;">
+                                                <label class="container_input" style="margin-top: 10px;">
+
+                                                    <input class="" type="checkbox" id="optRuc1" data-id="1"
+                                                        style="display: none;">
+                                                    <span class="checkmark"></span>&nbsp;
+                                                </label>
+                                            </div>
+
+                                            <div class=" col-md-5 col-sm-5 col-xs-12 with-icon">
+                                                <i class='bx bxs-id-card'></i>
+                                                <input maxlength="11" type="tel" class="custom-input" id="rucPasajero1"
+                                                    data-id="1" name="rucPasajero"
+                                                    onkeyup="validarDocCliente(this); validarDatosRUC(this);"
+                                                    placeholder="RUC (opcional)">
+                                            </div>
+
+                                            <div class=" col-md-7 col-sm-7 col-xs-12  with-icon">
+                                                <i class='bx bx-location-plus'></i>
+                                                <input readonly="readonly" type="text" class="custom-input"
+                                                    id="razonSocialPasajero1" name="razonSocialPasajero"
+                                                    placeholder="Razón Social">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-12 p-top-10">
+                                <fieldset class="">
+                                    <legend class="text-muted legend_fs">
+                                        Datos de contacto
+                                    </legend>
+
+                                    <div class="row">
+
+                                        <div class=" form-group">
+                                            <div class=" col-md-6 col-sm-6 col-xs-12 with-icon">
+                                                <i class='bx bx-mail-send'></i>
+                                                <input type="text" class="custom-input" id="emailPasajero1"
+                                                    name="correoPasajero" placeholder="Correo">
+                                            </div>
+
+                                            <div class=" col-md-6 col-sm-6 col-xs-12 with-icon">
+                                                <i class='bx bx-phone'></i>
+                                                <input type="tel" class="custom-input" id="telefonoPasajero1"
+                                                    name="telefonoPasajero" placeholder="Celular">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12 p-top-10">
+                                <fieldset class="">
+                                    <legend class="text-muted legend_fs">Datos del viaje</legend>
+                                </fieldset>
+
+                                <div class="row">
+
+                                    <div class="">
+                                        <!-- Detalles de los asientos del bus -->
+
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <label class="w600 text-primary">TRUJILLO - LIMA <span class="font_size_16p"
+                                                    style="">(14/10/2021)</span></label><br>
+                                        </div>
+
+                                        <div class=" col-md-2 col-sm-2 col-xs-12">
+                                            <label for="asientoIda1">Asiento</label>
+                                            <span id="loadAsientoIda1"></span>
+
+                                            <select id="asientoIda1" name="asientoIda" class="custom-input"
+                                                data-pasajeros="1" data-id="1" disabled="disabled">
+
+
+                                                <option value="I-53-95.00-0-0" selected="selected">53</option>
+
+                                            </select>
+                                        </div>
+
+                                        <div id="divAlimentacionIda1">
+                                        </div>
+
+
+
+
+
+
+                                        <div id="divMetoPagoIda1">
+                                            <div class=" col-md-2 col-sm-3 col-xs-12" hidden="">
+                                                <label for="asientoIda1">Pagar con</label>
+                                                <span id="loadMétodoIda1"></span>
+
+                                                <select id="metodoIda1" name="metodoIda" onchange="verificarPago(this);"
+                                                    class="custom-input" data-viaje="I" data-id="1">
+                                                    <option value="S">Soles</option>
+                                                </select>
+                                                <span id="msjMetodoIda1" class="control-label text-red"
+                                                    hidden=""></span>
+                                            </div>
+                                            <div class=" col-md-2 col-sm-3 col-xs-12">
+                                                <label for="precioMetodoIda1">Precio</label>
+                                                <label id="precioMetodoIda1" class="form-control"></label>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+
+                                    <div class="">
+
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <label class="w600 text-primary">LIMA - TRUJILLO <span class="font_size_16p"
+                                                    style="">(21/10/2021)</span></label>
+                                        </div>
+
+                                        <div class=" col-md-2 col-sm-2 col-xs-12">
+                                            <label for="asientoRetorno1">Asiento</label>
+                                            <span id="loadAsientoRetorno1"></span>
+                                            <select id="asientoRetorno1" class="custom-input" name="asientoRetorno"
+                                                data-pasajeros="1" data-id="1" onchange="obtenerMenu(this)">
+
+                                                <option value="">Seleccione asiento..</option>
+
+                                                <option selected="" value="R-53-95.00-0-0">53</option>
+
+                                            </select>
+                                        </div>
+
+                                        <div id="divAlimentacionRetorno1">
+                                        </div>
+
+                                        <script>
+                                            setTimeout(function () {
+                                                $('#asientoRetorno1').change();
+                                            }, 1000);
+
+                                        </script>
+
+
+
+
+                                        <div id="divMetoPagoRet1">
+                                            <div class=" col-md-2 col-sm-3 col-xs-12" hidden="">
+                                                <label for="asientoIda1">Pagar con</label>
+                                                <span id="loadMétodoRet1"></span>
+
+                                                <select id="metodoRet1" name="metodoRet" onchange="verificarPago(this);"
+                                                    class="custom-input" data-viaje="R" data-id="1">
+                                                    <option value="S">Soles</option>
+                                                </select>
+                                                <span id="msjMetodoRet1" class="control-label text-danger"
+                                                    hidden=""></span>
+                                            </div>
+                                            <div class=" col-md-2 col-sm-3 col-xs-12">
+                                                <label for="precioMetodoRet1">Precio</label>
+                                                <label id="precioMetodoRet1" class="form-control"></label>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="panel-heading">
+                                        <span id="lblemailPasajero1"></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row"></div>
+
+    </form>
+
+    <br>
+
+
+
+
+    <div class="btn_sig_fixed col-md-12 col-xs-12">
+        <div class="col-md-4 col-xs-12"></div>
+        <div class="col-md-6 col-sm-9 col-xs-12 m-top-10 m-bottom-10">
+            Todos los pasajeros deben portar su documento de identidad para poder embarcar.
+        </div>
+
+        <div class="col-md-10 col-sm-9 col-xs-6 hidden-lg hidden-md hidden-sm"></div>
+
+
+
+        <div class="col-md-2 col-sm-3 col-xs-6">
+            <a id="btnSiguiente" class="btn btn-success btn_witdh_Prog" data-pasajeros="1"
+                style="font-size: 14px !important; margin-right: 100%;"><i class=""></i>Siguiente</a>
+            <div id="btnProgressSig" class="progress btnProgressSig btn_witdh_Prog"
+                style="display: none; margin-right: 0px !important;">
+                <div id="txtProgressSig" class="progress-bar progress-bar-striped progress-bar-success active"
+                    role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
+                    style="width: 100%; font-size: 14px !important;">
+                    Siguiente
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JS includes -->
+
+    <script src="js/ECommerce/scripts_asientos.js?v=0.0.0.0003"></script>
+
+
+    <script>
+        $("#divTimer").removeClass("hidden");
+        paso = 3;
+        $("#spPaso").html("Paso 3/4: Registro del Pasajero");
+        $("#tituloCabeceraVenta").html('<img src="assets/images/icons/car-seat_32.png" class="p-l-15" /><font class="text_height_2_5 titleItinerario">DATOS DEL PASAJERO</font>');
+        $("#accordionHead").html("");
+        //$("#accordionHead").hide();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+
+        $('#btnToolActualizarVenta').attr('onclick', 'cargarPagina("contenido_pasaje", "ecommerce/app_asientos.aspx?" + paramNumTransac)');
+
+        function obtenerEdadPasajero(object) {
+            var fecha_nac = $(object).val();
+            var id = $(object).data().idedad;
+
+            if (!isEmpty(fecha_nac)) {
+                var edad = calculateAge(fecha_nac);
+                $("#" + id).html('<span class="label label-primary pull-right" style="font-size: 100%;">' + edad + ' años</span>');
+            } else {
+                $("#" + id).html("");
+            }
+        }
+
+        function mostrarTextoPL(valor, puntos) {
+            var texto = "";
+            var info_pl = "  data-toggle='tooltipPL' title='Puntos Linea es un programa pensado en ti y tu experiencia al viajar con nosotros. Puntos Línea te permite sumar puntos por cada viaje realizado, con estos puntos podrás canjear pasajes y acceder grandes beneficios desde tu primera compra'";
+            switch (valor) {
+                case "0":
+                    texto = "Automáticamente serás miembro del programa <span class='text-primary cursor_pointer'" + info_pl + ">Puntos Linea</span>";
+                    break;
+                case "1":
+                    texto = "Eres miembro de <span class='text-primary cursor_pointer'" + info_pl + ">Puntos Linea</span>: Tienes " + puntos + " ptos";
+                    break;
+                default:
+            }
+            setTimeout(function () {
+                var placement = "right";
+                if (isMobile.mobilecheck()) {
+                    placement = "bottom";
+                }
+                $('[data-toggle="tooltipPL"]').tooltip({
+                    //trigger: "hover",
+                    animated: "fade",
+                    placement: placement,
+                    html: true
+                });
+            }, 500);
+
+            return texto;
+        }
+
+        function obtenerMenu(object) {
+            var datos = object.value.split('-');
+            var id = object.dataset.id;
+            if (object.name == "asientoRetorno") {
+                $("#loadAsientoRetorno" + id).html('<img src="../assets/images/loader_icon2.gif" />');
+                for (var i = 1; i <= object.dataset.pasajeros; i++) {
+                    if (i != id) {
+                        $("#asientoRetorno" + i + " option[value='" + object.value + "']").removeClass("visible").hide();
+                    }
+                    var cantVisibles = 0;
+                    $("#asientoRetorno" + i + " > option").each(function () {
+                        for (var j = 1; j <= object.dataset.pasajeros; j++) {
+                            if (this.value == $("#asientoRetorno" + j).val() && this.value != "" && this.value != $("#asientoRetorno" + i).val()) {
+                                $("#asientoRetorno" + i + " option[value='" + this.value + "']").removeClass("visible").hide();
+                                break;
+                            } else {
+                                $("#asientoRetorno" + i + " option[value='" + this.value + "']").addClass("visible").show();
+                            }
+                        }
+                        if ($(this).is(":visible") || $(this).hasClass("visible")) {
+                            cantVisibles++;
+                        }
+                    })
+                    if (cantVisibles == 1) {
+                        $("#asientoRetorno" + i).removeClass("visible").hide();
+                    } else {
+                        $("#asientoRetorno" + i).addClass("visible").show();
+                    }
+                }
+            } else {
+                $("#loadAsientoIda" + id).html('<img src="../assets/images/loader_icon2.gif" />');
+            }
+            if (object.value != "") {
+                var params = {
+                    compra: {
+                        Tipo: datos[0],
+                        Asiento: datos[1]
+                    }
+                }
+                $.ajax({
+                    method: "POST",
+                    url: carpeta_ec + "app_asientos.aspx/ObtenerTipoMenu",
+                    contentType: "application/json; charset-utf-8",
+                    data: JSON.stringify(params),
+                    dataType: "json",
+                    success: function (response) {
+                        var html = " ";
+                        if (response.d != "") {
+                            html += '<div class="">' +
+                                '<div class=" col-md-2 col-sm-4 col-xs-12">';
+                            switch (datos[0]) {
+                                case "I":
+                                    html += '<label for="alimentacionIda' + id + '">Refrigerio</label>' +
+                                        '<select id="alimentacionIda' + id + '" name="alimentacionIda" class="custom-input">';
+                                    html += listarMenu(response.d);
+                                    break;
+                                case "R":
+                                    html += '<label for="alimentacionRetorno' + id + '">Refrigerio</label>' +
+                                        '<select id="alimentacionRetorno' + id + '" name="alimentacionRetorno" class="custom-input">';
+                                    html += listarMenu(response.d);
+                                    break;
+                            }
+                            html += '</select>' +
+                                '</div>' +
+                                '</div>';
+                        }
+
+                        var metodoPago = "";
+                        var precio = "";
+                        switch (datos[0]) {
+                            case "I":
+                                metodoPago = $("#metodoIda" + id).val();
+                                if (metodoPago == "S") {
+                                    precio = datos[2];
+                                } else if (metodoPago == "P") {
+                                    precio = datos[3] + " ptos <span class='fa fa-plus'></span> S/" + datos[4];
+                                    html = "";
+                                }
+                                $("#precioMetodoIda" + id).html(precio);
+                                $("#divAlimentacionIda" + id).html(html);
+                                $("#loadAsientoIda" + id).html('');
+                                $("#msjMetodoIda" + id).html("").hide();
+                                break;
+                            case "R":
+                                metodoPago = $("#metodoRet" + id).val();
+                                if (metodoPago == "S") {
+                                    precio = datos[2];
+                                } else if (metodoPago == "P") {
+                                    precio = datos[3] + " ptos <span class='fa fa-plus'></span> S/" + datos[4];
+                                    html = "";
+                                }
+                                $("#precioMetodoRet" + id).html(precio);
+                                $("#divAlimentacionRetorno" + id).html(html);
+                                $("#loadAsientoRetorno" + id).html('');
+                                $("#msjMetodoRet" + id).html("").hide();
+                                break;
+                        }
+                    },
+                    error: function (e) {
+                        console.log('error', e);
+                    }
+                })
+            } else {
+                switch (object.name) {
+                    case "asientoIda":
+                        $("#divAlimentacionIda" + id).html("");
+                        $("#loadAsientoIda" + id).html('');
+                        break;
+                    case "asientoRetorno":
+                        $("#divAlimentacionRetorno" + id).html("");
+                        $("#loadAsientoRetorno" + id).html('');
+                        break;
+                }
+            }
+
+        }
+
+        function validarDatosRUC(object) {
+            var id = $(object).data().id;
+            var valor = $(object).val();
+
+            if (valor.length == 0) {
+                $("#rucPasajero" + id).val("");
+                //$("#rucPasajero" + id).prop('readonly', true);
+
+                $("#razonSocialPasajero" + id).val("");
+                $("#razonSocialPasajero" + id).prop('readonly', true);
+
+                $("#rucPasajero" + id + "-error").html("").hide();
+
+                $("#razonSocialPasajero" + id + "-error").html("").hide();
+
+                $("#rucPasajero" + id).rules("remove", "required");
+                $("#razonSocialPasajero" + id).rules("remove", "required");
+
+                $("#optRuc" + id).prop('checked', false);
+            } else {
+                $("#rucPasajero" + id).rules("add", {
+                    maxlength: 11,
+                    noSpace: true,
+                    required: true
+                });
+
+                $("#razonSocialPasajero" + id).rules("add", {
+                    maxlength: 110,
+                    noSpace: true,
+                    required: true
+                });
+
+                $("#optRuc" + id).prop('checked', true);
+            }
+
+        }
+
+        function habilitarInputRuc(id, estado) {
+            //$("#rucPasajero" + id).prop('readonly', estado);
+        }
+
+        function verificarEdadPas(object) {
+            var edad = calculateAge(object.value);
+            var idSpan = $(object).data().idedad;
+            if (edad < 18) {
+                //$("#spMenorEdad" + idSpan).html("<br>Si el menor viaja solo o con un apoderado, debe portar el permiso notarial correspondiente");
+                $("#modalAlertaBody").html("<p>Si el menor viaja solo o con un apoderado, debe portar el permiso notarial correspondiente</p>")
+                $("#modalAlerta").modal("show");
+            } else {
+                //$("#spMenorEdad" + idSpan).html("");
+                $("#modalAlertaBody").html("");
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+:root {
+  /*fonts*/
+  --font--family: "Poppins", sans-serif;
+  /*colors*/
+  --color-body-linea: #fcfcfc;
+  --color-black-A: #404040;
+
+  --color-icon: #b5b5b5;
+}
+
+.custom-input {
+  font-family: var(--font--family) !important;
+  border: none;
+  border-bottom: solid 0.5px rgb(150, 150, 150);
+  height: 47px;
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+  font-family: var(--font--family);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color-black-A);
+}
+.custom-input-b {
+  font-family: var(--font--family) !important;
+  border: none;
+
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+  font-family: var(--font--family);
+  font-weight: 400;
+  font-size: 14px;
+}
+.custom-input__visa {
+  height: 28px;
+}
+
+.with-icon {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.with-icon i {
+  color: var(--color-icon);
+  font-size: 24px;
+}
+
+.with-icon_B {
+  align-items: center;
+  column-gap: 15px;
+  padding: 15px;
+}

@@ -89,7 +89,6 @@ const buildSits = () => {
   let sit = document.getElementsByTagName("template")[0].content;
 
   //get lader
-
   let lader = document.getElementsByTagName("template")[2].content;
 
   //get tv

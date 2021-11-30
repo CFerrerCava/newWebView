@@ -1,0 +1,453 @@
+<link rel="stylesheet" href="../css/style_notification.css" />
+<link rel="stylesheet" href="../css/formStyle.css" />
+<link
+  href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+  rel="stylesheet"
+/>
+
+<section class="content-header">
+  <div class="flex-table-actions">
+    <h1>Notificaciones de app</h1>
+  </div>
+</section>
+
+<section class="content m-bottom-40 row" id="app">
+  <div class="col-md-12">
+    <div class="box box-solid">
+      <div class="box-body">
+        <div class="nav-tabs-custom">
+          <ul class="nav nav-tabs">
+            <li class="active">
+              <a href="#tab_1" data-toggle="tab">Notificaciones</a>
+            </li>
+            <li>
+              <a href="#tab_2" data-toggle="tab">Tipo de notificaciones</a>
+            </li>
+            <li><a href="#tab_3_users" data-toggle="tab">Ver usuarios</a></li>
+            <li class="pull-right">
+              <a
+                style="cursor: pointer"
+                class="text-muted"
+                @click="renewConnection()"
+                ><i class="bx bx-revision"></i>Conectar con servidor</a
+              >
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tab_1">
+              <div class="tab-content">
+                <div class="box-body tab-pane active" id="tab_table_noti">
+                  <div class="form row">
+                    <div class="form-group flex-table-actions">
+                      <p class="table-header--title">Lista de notificaciones</p>
+                      <div class="table-header--actions">
+                        <a
+                          href="#tab_form"
+                          data-toggle="tab"
+                          class="btn btn-block btn-primary btn-noti"
+                          >Agregar nuevo</a
+                        >
+
+                        <div class="with-icon" style="width: 350px">
+                          <i class="bx bx-search-alt"></i>
+                          <input
+                            type="search"
+                            placeholder="Buscar"
+                            class="custom-input"
+                            v-model="searchNoti"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <table
+                        id="datatableImagenes"
+                        class="table table-striped table-bordered dataTable"
+                        style="width: 100%"
+                      >
+                        <thead class="">
+                          <tr>
+                            <th class="celda-centrado width-2p">Título</th>
+                            <th class="celda-centrado width-20p">Tipo</th>
+                            <th class="celda-centrado width-5p">Leidos</th>
+                            <th class="celda-centrado width-10p">Estado</th>
+                            <th class="celda-centrado width-10p">Fecha</th>
+                            <th class="celda-centrado width-20p">Acciones</th>
+                          </tr>
+                        </thead>
+                        <tbody id="body-table-noti" hidden class="text-center">
+                          <tr v-for="(item,index) in listNotiTemp">
+                            <td>
+                              {{item.Titulo.substring(0,50)}}{{item.Titulo.length>50?"...":""}}
+                            </td>
+                            <td>{{item.Tipo.Nombre}}</td>
+                            <td>{{item.Leido}}</td>
+                            <td>{{item.EstadoPubLabel}}</td>
+                            <td>{{item.Fecha}}</td>
+                            <td class="table-actions text-justify">
+                              <a href="#tab_form" data-toggle="tab">
+                                <i
+                                  class="bx bxs-edit color_blue"
+                                  data-toggle="tooltip"
+                                  title="Editar"
+                                  @click="setDataToEdit({item:item, index:index })"
+                                >
+                                </i>
+                              </a>
+                              <i
+                                class="bx bxs-trash color_red"
+                                data-toggle="tooltip"
+                                title="Eliminar"
+                                @click="deleteNoti({id:item.IdNotificacion,index:index})"
+                              ></i>
+
+                              <i
+                                class="bx bxs-copy-alt text-warning"
+                                v-if="item.EstadoPub <=2 "
+                                @click="replicate({item: item})"
+                              ></i>
+                              <i
+                                class="bx bxs-user-account text-success"
+                                v-if="item.EstadoPub >=1 && item.EstadoPub <=2"
+                              ></i>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="box-body tab-pane" id="tab_form">
+                  <div class="with-icon m-bottom-10">
+                    <i class="bx bx-arrow-back"></i>
+                    <a
+                      href="#tab_table_noti"
+                      data-toggle="tab"
+                      @click="setDataToEdit({type:1})"
+                      >Regresar</a
+                    >
+                  </div>
+                  <div class="form row">
+                    <div
+                      class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                    >
+                      <label for="txtTituloP" class="col-form-label"
+                        >Título *</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="titleNoti"
+                        name="titleNoti"
+                        maxlength="255"
+                        v-model="notiObject.Titulo"
+                        placeholder="Ingrese título de la notificación"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form row">
+                    <div class="form-group col-md-4">
+                      <label for="txtTituloP" class="col-form-label"
+                        >Enlace</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="urlNoti"
+                        name="urlNoti"
+                        v-model="notiObject.UrlNotificacion"
+                        placeholder="Ingrese enlace de la notificación"
+                      />
+                    </div>
+
+                    <div class="form-group col-md-4">
+                      <div class="form row">
+                        <div
+                          class="
+                            form-group
+                            col-lg-12 col-md-12 col-sm-12 col-xs-12
+                          "
+                        >
+                          <label for="txtTituloP" class="col-form-label"
+                            >Tipo *
+                          </label>
+                          <select
+                            class="form-control"
+                            id="tipoNoti"
+                            name="tipoNoti"
+                            v-model="notiObject.Tipo"
+                          >
+                            <option
+                              v-for="(item,index) in listTypeNoti"
+                              :value="item"
+                            >
+                              {{item.Nombre}}
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                      <div class="form row">
+                        <div
+                          class="
+                            form-group
+                            col-lg-12 col-md-12 col-sm-12 col-xs-12
+                          "
+                        >
+                          <label for="txtTituloP" class="col-form-label"
+                            >Estado *
+                          </label>
+                          <select
+                            class="form-control"
+                            id="EstadoNoti"
+                            name="EstadoNoti"
+                            v-model="notiObject.EstadoPub"
+                          >
+                            <option
+                              v-for="(item,index) in listStateNoti"
+                              :value="item.EstadoPub"
+                              :hidden="!item.state"
+                            >
+                              {{item.EstadoPubLabel}}
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form row">
+                    <div
+                      class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                    >
+                      <label for="txtTituloP" class="col-form-label"
+                        >Contenido *</label
+                      >
+
+                      <textarea
+                        class="form-control height-100px"
+                        id="contentNoti"
+                        name="contentNoti"
+                        placeholder="Ingrese una descripción"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="fixed-action-btn">
+                    <a
+                      href="#tab_form2"
+                      data-toggle="tab"
+                      v-if="notiObject.EstadoPub===3"
+                    >
+                      <i
+                        class="bx bx-right-arrow-alt bx-fade-left"
+                        style="font-size: 24px"
+                      ></i
+                    ></a>
+                    <button
+                      class="btn-floating btn btn-primary"
+                      :tooltipbtnfix="tooltipButton"
+                      @click="toForm2"
+                      v-if="notiObject.EstadoPub<3"
+                    >
+                      <%--
+                      <i
+                        class="bx bx-right-arrow-alt bx-fade-left"
+                        style="font-size: 24px"
+                        v-if="notiObject.EstadoPub===3"
+                      ></i
+                      >--%>
+
+                      <i class="fa fa-cloud-upload"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="box-body tab-pane" id="tab_form2">
+                  <div class="with-icon m-bottom-10">
+                    <i class="bx bx-arrow-back"></i>
+                    <a href="#tab_form" data-toggle="tab">Regresar</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.tab-pane -->
+            <div class="tab-pane" id="tab_2">
+              <div class="box-body">
+                <div class="form row">
+                  <div
+                    class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                  >
+                    <label for="txtTituloP" class="col-form-label"
+                      >Nombre *</label
+                    >
+                    <div class="row">
+                      <div
+                        class="form-group col-lg-8 col-md-8 col-sm-8 col-xs-8"
+                      >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="nameTipoNoti"
+                          name="nameTipoNoti"
+                          maxlength="255"
+                          placeholder="Ingrese nombre del tipo de notificación"
+                          v-model="typeNotiObject.Nombre"
+                        />
+                      </div>
+                      <div
+                        class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4"
+                      >
+                        <button
+                          @click="setTypeNoti()"
+                          type="button"
+                          class="btn btn-success"
+                        >
+                          Registrar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form row">
+                  <div
+                    class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                  >
+                    <table
+                      id="datatableImagenes2"
+                      class="table table-striped table-bordered dataTable"
+                      style="width: 100%"
+                    >
+                      <thead class="">
+                        <tr>
+                          <th class="celda-centrado width-2p"></th>
+                          <th class="celda-centrado width-20p">Nombre</th>
+                          <th class="celda-centrado width-20p">Acciones</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr v-for="(item,index) in listTypeNoti">
+                          <td class="text-center">{{(index+1)}}</td>
+                          <td>
+                            <input
+                              v-model="item.Nombre"
+                              @change="editTypeNoti({id:item.IdTipoNotificacion,       index:index})"
+                              class="custom-input-b"
+                            />
+                          </td>
+                          <%--
+                          <td class="text-center">
+                            <select
+                              class="custom-input-b"
+                              v-model="item.Estado"
+                              @change="editTypeNoti({id:item.IdTipoNotificacion,       index:index})"
+                            >
+                              <option value="true">Habilitado</option>
+                              <option value="false">Deshabilitado</option>
+                            </select>
+                          </td>
+                          --%>
+                          <td class="table-actions text-center">
+                            <i
+                              class="bx bxs-trash color_red"
+                              data-toggle="tooltip"
+                              title="Eliminar"
+                              @click="deleteTypeNoti({id:item.IdTipoNotificacion,index:index})"
+                            ></i>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="tab_3_users">
+              Total: {{usersLength}}
+              <div class="row" style="margin-top: 15px; margin-bottom: 15px">
+                <div class="col-md-2">
+                  <button
+                    type="button"
+                    class="btn btn-block btn-warning"
+                    @click="filterUser({type:'Todos'})"
+                  >
+                    Todos
+                  </button>
+                </div>
+                <div class="col-md-2">
+                  <button
+                    type="button"
+                    class="btn btn-block btn-success"
+                    @click="filterUser({type:'A'})"
+                  >
+                    Android
+                  </button>
+                </div>
+                <div class="col-md-2">
+                  <button
+                    type="button"
+                    class="btn btn-block btn-danger"
+                    @click="filterUser({type:'I'})"
+                  >
+                    IOS
+                  </button>
+                </div>
+                <div class="col-md-2">
+                  <button
+                    type="button"
+                    class="btn btn-block btn-primary"
+                    @click="filterUser({type:'W'})"
+                  >
+                    WEB
+                  </button>
+                </div>
+              </div>
+
+              <table
+                id="dataUsers"
+                class="table table-striped table-bordered dataTable"
+                style="width: 100%"
+              >
+                <thead class="">
+                  <tr>
+                    <th class="celda-centrado width-2p">Id</th>
+                    <th class="celda-centrado width-20p">Unique id</th>
+                  </tr>
+                </thead>
+                <tbody
+                  id="body-table-users"
+                  class="text-center"
+                  v-if="usersLength>0"
+                >
+                  <tr v-for="(item,index) in listUsersTemp">
+                    <td>{{item.id}}</td>
+                    <td>{{item.uniqueID}}</td>
+                  </tr>
+                </tbody>
+                <p v-if="usersLength===0" class="message-empty">
+                  No hay registros
+                </p>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script
+  defer
+  src="js/secciones/notificacion/notificaciones.js?v0.0.0.001"
+></script>
+<script
+  defer
+  src="js/secciones/notificacion/service_worker.js?v0.0.0.001"
+></script>
+<!-- Para Integracion-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- Para Produccion
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+-->

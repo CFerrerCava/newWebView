@@ -1,0 +1,1411 @@
+<html style="height: auto; min-height: 100%;">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        MÓVIL PASAJES
+    </title>
+    <link rel="icon" href="https://www.linea.pe/imagenes/favicon.ico" type="image/ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        ::-webkit-scrollbar {
+            -webkit-appearance: none;
+        }
+
+        ::-webkit-scrollbar:vertical {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-button:increment,
+        ::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        ::-webkit-scrollbar:horizontal {
+            height: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #aba4a4;
+            border-radius: 10px;
+            /*border: 3px solid #f1f2f3;*/
+        }
+
+        ::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+
+        .panel {
+            webkit-box-shadow: 0 1px 1px transparent !important;
+            box-shadow: 0 1px 1px transparent !important;
+        }
+
+        .content-wrapper {
+            padding-top: 0px !important;
+        }
+
+        .modal-body-max-height {
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .fixed-action-zoom_controls_pdf {
+            left: 45%;
+            position: fixed;
+            z-index: 1030;
+        }
+
+        .fa-Calificanos {
+            font-size: 3.5em !important;
+        }
+
+        label {
+            font-weight: normal !important;
+        }
+
+        .nav-sub-cab>li,
+        .nav-sub-cab>li>a {
+            font-weight: normal !important;
+        }
+
+        /*.toggle.btn-danger, .toggle.btn-primary, .toggle.btn-success, .toggle.btn-default,
+        .toggle-group > .btn-danger, .toggle-group > .btn-primary, .toggle-group > .btn-success {
+            padding: unset !important;
+        }
+        .btn-group-xs > .btn, .btn-xs {
+            padding: 1px 5px !important;
+        }*/
+        .btn-primary-toggle {
+            color: #fff !important;
+            background-color: #428bca;
+            border-color: #357ebd;
+        }
+
+        .btn-info-toggle {
+            color: #fff !important;
+            background-color: #5bc0de;
+            border-color: #46b8da;
+        }
+
+        .btn-success-toggle {
+            color: #fff !important;
+            background-color: #449d44;
+            border-color: #398439;
+        }
+
+        .btn-warning-toggle {
+            color: #fff !important;
+            background-color: #ec971f;
+            border-color: #d58512;
+        }
+
+        .btn-danger-toggle {
+            color: #fff !important;
+            background-color: #c9302c;
+            border-color: #ac2925;
+        }
+
+        .btn-default-toggle {
+            color: #333 !important;
+            background-color: #ccc;
+            border-color: #ccc;
+        }
+
+        .btn-primary-toggle:hover,
+        .btn-default-toggle:hover {
+            /*background-color: #367fa9;*/
+            opacity: .9;
+        }
+
+        .btn-danger {
+            background-color: #990d0d !important;
+        }
+
+        .footable-row-detail-row {
+            line-height: 2.0em !important;
+        }
+
+        .btnProgressSig {
+            margin-bottom: 0px !important;
+            border-radius: 3px !important;
+        }
+
+        .btnProgress .progress-bar {
+            text-transform: none !important;
+        }
+
+        .btnProgressSig .progress-bar {
+            text-transform: none !important;
+        }
+
+        @media (max-height: 400px) {
+            .modal-body-max-height {
+                max-height: 280px !important;
+            }
+        }
+
+        @media (min-height: 450px) {
+            .modal-body-max-height {
+                max-height: 320px !important;
+            }
+        }
+
+        @media (min-height: 490px) {
+            .modal-body-max-height {
+                max-height: 350px;
+            }
+        }
+
+        @media (min-height: 600px) and (max-height: 899px) {
+            .modal-body-max-height {
+                max-height: 460px !important;
+            }
+        }
+
+        @media (min-height: 900px) and (max-height: 1200px) {
+            .modal-body-max-height {
+                max-height: 760px !important;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .modal-lg {
+                width: 900px !important;
+            }
+        }
+
+        @media(max-width: 768px) {
+            .btn {
+                font-size: 13px !important;
+            }
+
+            .btn_sig_fixed {
+                position: fixed !important;
+                bottom: 0px;
+                right: 0px;
+                background: white;
+                padding: 8px 10px;
+                z-index: 9;
+                padding-bottom: 20px;
+            }
+
+            .form-group {
+                margin-right: 0px !important;
+            }
+        }
+
+        @media (max-width:1024px) {
+            .display_blocks_none_bottom {
+                margin-bottom: 200px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .btn_witdh_Prog {
+                width: 120px !important;
+            }
+        }
+
+        .legend_fs {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .btn_witdh_Prog {
+            width: 130px;
+        }
+    </style>
+
+    <style type="text/css" id="notify-bootstrap">
+        .notifyjs-bootstrap-base {
+            font-weight: bold;
+            padding: 8px 15px 8px 14px;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+            background-color: #fcf8e3;
+            border: 1px solid #fbeed5;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            white-space: nowrap;
+            padding-left: 25px;
+            background-repeat: no-repeat;
+            background-position: 3px 7px;
+        }
+
+        .notifyjs-bootstrap-error {
+            color: #B94A48;
+            background-color: #F2DEDE;
+            border-color: #EED3D7;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAtRJREFUeNqkVc1u00AQHq+dOD+0poIQfkIjalW0SEGqRMuRnHos3DjwAH0ArlyQeANOOSMeAA5VjyBxKBQhgSpVUKKQNGloFdw4cWw2jtfMOna6JOUArDTazXi/b3dm55socPqQhFka++aHBsI8GsopRJERNFlY88FCEk9Yiwf8RhgRyaHFQpPHCDmZG5oX2ui2yilkcTT1AcDsbYC1NMAyOi7zTX2Agx7A9luAl88BauiiQ/cJaZQfIpAlngDcvZZMrl8vFPK5+XktrWlx3/ehZ5r9+t6e+WVnp1pxnNIjgBe4/6dAysQc8dsmHwPcW9C0h3fW1hans1ltwJhy0GxK7XZbUlMp5Ww2eyan6+ft/f2FAqXGK4CvQk5HueFz7D6GOZtIrK+srupdx1GRBBqNBtzc2AiMr7nPplRdKhb1q6q6zjFhrklEFOUutoQ50xcX86ZlqaZpQrfbBdu2R6/G19zX6XSgh6RX5ubyHCM8nqSID6ICrGiZjGYYxojEsiw4PDwMSL5VKsC8Yf4VRYFzMzMaxwjlJSlCyAQ9l0CW44PBADzXhe7xMdi9HtTrdYjFYkDQL0cn4Xdq2/EAE+InCnvADTf2eah4Sx9vExQjkqXT6aAERICMewd/UAp/IeYANM2joxt+q5VI+ieq2i0Wg3l6DNzHwTERPgo1ko7XBXj3vdlsT2F+UuhIhYkp7u7CarkcrFOCtR3H5JiwbAIeImjT/YQKKBtGjRFCU5IUgFRe7fF4cCNVIPMYo3VKqxwjyNAXNepuopyqnld602qVsfRpEkkz+GFL1wPj6ySXBpJtWVa5xlhpcyhBNwpZHmtX8AGgfIExo0ZpzkWVTBGiXCSEaHh62/PoR0p/vHaczxXGnj4bSo+G78lELU80h1uogBwWLf5YlsPmgDEd4M236xjm+8nm4IuE/9u+/PH2JXZfbwz4zw1WbO+SQPpXfwG/BBgAhCNZiSb/pOQAAAAASUVORK5CYII=);
+        }
+
+        .notifyjs-bootstrap-success {
+            color: #468847;
+            background-color: #DFF0D8;
+            border-color: #D6E9C6;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAutJREFUeNq0lctPE0Ecx38zu/RFS1EryqtgJFA08YCiMZIAQQ4eRG8eDGdPJiYeTIwHTfwPiAcvXIwXLwoXPaDxkWgQ6islKlJLSQWLUraPLTv7Gme32zoF9KSTfLO7v53vZ3d/M7/fIth+IO6INt2jjoA7bjHCJoAlzCRw59YwHYjBnfMPqAKWQYKjGkfCJqAF0xwZjipQtA3MxeSG87VhOOYegVrUCy7UZM9S6TLIdAamySTclZdYhFhRHloGYg7mgZv1Zzztvgud7V1tbQ2twYA34LJmF4p5dXF1KTufnE+SxeJtuCZNsLDCQU0+RyKTF27Unw101l8e6hns3u0PBalORVVVkcaEKBJDgV3+cGM4tKKmI+ohlIGnygKX00rSBfszz/n2uXv81wd6+rt1orsZCHRdr1Imk2F2Kob3hutSxW8thsd8AXNaln9D7CTfA6O+0UgkMuwVvEFFUbbAcrkcTA8+AtOk8E6KiQiDmMFSDqZItAzEVQviRkdDdaFgPp8HSZKAEAL5Qh7Sq2lIJBJwv2scUqkUnKoZgNhcDKhKg5aH+1IkcouCAdFGAQsuWZYhOjwFHQ96oagWgRoUov1T9kRBEODAwxM2QtEUl+Wp+Ln9VRo6BcMw4ErHRYjH4/B26AlQoQQTRdHWwcd9AH57+UAXddvDD37DmrBBV34WfqiXPl61g+vr6xA9zsGeM9gOdsNXkgpEtTwVvwOklXLKm6+/p5ezwk4B+j6droBs2CsGa/gNs6RIxazl4Tc25mpTgw/apPR1LYlNRFAzgsOxkyXYLIM1V8NMwyAkJSctD1eGVKiq5wWjSPdjmeTkiKvVW4f2YPHWl3GAVq6ymcyCTgovM3FzyRiDe2TaKcEKsLpJvNHjZgPNqEtyi6mZIm4SRFyLMUsONSSdkPeFtY1n0mczoY3BHTLhwPRy9/lzcziCw9ACI+yql0VLzcGAZbYSM5CCSZg1/9oc/nn7+i8N9p/8An4JMADxhH+xHfuiKwAAAABJRU5ErkJggg==);
+        }
+
+        .notifyjs-bootstrap-info {
+            color: #3A87AD;
+            background-color: #D9EDF7;
+            border-color: #BCE8F1;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYFAhkSsdes/QAAA8dJREFUOMvVlGtMW2UYx//POaWHXg6lLaW0ypAtw1UCgbniNOLcVOLmAjHZolOYlxmTGXVZdAnRfXQm+7SoU4mXaOaiZsEpC9FkiQs6Z6bdCnNYruM6KNBw6YWewzl9z+sHImEWv+vz7XmT95f/+3/+7wP814v+efDOV3/SoX3lHAA+6ODeUFfMfjOWMADgdk+eEKz0pF7aQdMAcOKLLjrcVMVX3xdWN29/GhYP7SvnP0cWfS8caSkfHZsPE9Fgnt02JNutQ0QYHB2dDz9/pKX8QjjuO9xUxd/66HdxTeCHZ3rojQObGQBcuNjfplkD3b19Y/6MrimSaKgSMmpGU5WevmE/swa6Oy73tQHA0Rdr2Mmv/6A1n9w9suQ7097Z9lM4FlTgTDrzZTu4StXVfpiI48rVcUDM5cmEksrFnHxfpTtU/3BFQzCQF/2bYVoNbH7zmItbSoMj40JSzmMyX5qDvriA7QdrIIpA+3cdsMpu0nXI8cV0MtKXCPZev+gCEM1S2NHPvWfP/hL+7FSr3+0p5RBEyhEN5JCKYr8XnASMT0xBNyzQGQeI8fjsGD39RMPk7se2bd5ZtTyoFYXftF6y37gx7NeUtJJOTFlAHDZLDuILU3j3+H5oOrD3yWbIztugaAzgnBKJuBLpGfQrS8wO4FZgV+c1IxaLgWVU0tMLEETCos4xMzEIv9cJXQcyagIwigDGwJgOAtHAwAhisQUjy0ORGERiELgG4iakkzo4MYAxcM5hAMi1WWG1yYCJIcMUaBkVRLdGeSU2995TLWzcUAzONJ7J6FBVBYIggMzmFbvdBV44Corg8vjhzC+EJEl8U1kJtgYrhCzgc/vvTwXKSib1paRFVRVORDAJAsw5FuTaJEhWM2SHB3mOAlhkNxwuLzeJsGwqWzf5TFNdKgtY5qHp6ZFf67Y/sAVadCaVY5YACDDb3Oi4NIjLnWMw2QthCBIsVhsUTU9tvXsjeq9+X1d75/KEs4LNOfcdf/+HthMnvwxOD0wmHaXr7ZItn2wuH2SnBzbZAbPJwpPx+VQuzcm7dgRCB57a1uBzUDRL4bfnI0RE0eaXd9W89mpjqHZnUI5Hh2l2dkZZUhOqpi2qSmpOmZ64Tuu9qlz/SEXo6MEHa3wOip46F1n7633eekV8ds8Wxjn37Wl63VVa+ej5oeEZ/82ZBETJjpJ1Rbij2D3Z/1trXUvLsblCK0XfOx0SX2kMsn9dX+d+7Kf6h8o4AIykuffjT8L20LU+w4AZd5VvEPY+XpWqLV327HR7DzXuDnD8r+ovkBehJ8i+y8YAAAAASUVORK5CYII=);
+        }
+
+        .notifyjs-bootstrap-warn {
+            color: #C09853;
+            background-color: #FCF8E3;
+            border-color: #FBEED5;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAABJlBMVEXr6eb/2oD/wi7/xjr/0mP/ykf/tQD/vBj/3o7/uQ//vyL/twebhgD/4pzX1K3z8e349vK6tHCilCWbiQymn0jGworr6dXQza3HxcKkn1vWvV/5uRfk4dXZ1bD18+/52YebiAmyr5S9mhCzrWq5t6ufjRH54aLs0oS+qD751XqPhAybhwXsujG3sm+Zk0PTwG6Shg+PhhObhwOPgQL4zV2nlyrf27uLfgCPhRHu7OmLgAafkyiWkD3l49ibiAfTs0C+lgCniwD4sgDJxqOilzDWowWFfAH08uebig6qpFHBvH/aw26FfQTQzsvy8OyEfz20r3jAvaKbhgG9q0nc2LbZxXanoUu/u5WSggCtp1anpJKdmFz/zlX/1nGJiYmuq5Dx7+sAAADoPUZSAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfdBgUBGhh4aah5AAAAlklEQVQY02NgoBIIE8EUcwn1FkIXM1Tj5dDUQhPU502Mi7XXQxGz5uVIjGOJUUUW81HnYEyMi2HVcUOICQZzMMYmxrEyMylJwgUt5BljWRLjmJm4pI1hYp5SQLGYxDgmLnZOVxuooClIDKgXKMbN5ggV1ACLJcaBxNgcoiGCBiZwdWxOETBDrTyEFey0jYJ4eHjMGWgEAIpRFRCUt08qAAAAAElFTkSuQmCC);
+        }
+    </style>
+    <style type="text/css" id="notify-metro">
+        .notifyjs-metro-default {
+            color: #fafafa !important;
+            background-color: #ABB7B7;
+            border: 1px solid #ABB7B7;
+        }
+
+        .notifyjs-metro-error {
+            color: #fafafa !important;
+            background-color: rgba(203, 42, 42, 0.8);
+            border: 1px solid #cb2a2a;
+        }
+
+        .notifyjs-metro-success {
+            color: #fafafa !important;
+            background-color: rgba(51, 184, 108, 0.8);
+            border: 1px solid #33b86c;
+        }
+
+        .notifyjs-metro-info {
+            color: #fafafa !important;
+            background-color: rgba(28, 168, 221, 0.8);
+            border: 1px solid #1ca8dd;
+        }
+
+        .notifyjs-metro-warning {
+            color: #fafafa !important;
+            background-color: rgba(235, 193, 66, 0.8);
+            border: 1px solid #ebc142;
+        }
+
+        .notifyjs-metro-black {
+            color: #fafafa !important;
+            background-color: rgba(20, 8, 45, 0.8);
+            border: 1px solid #14082d;
+        }
+
+        .notifyjs-metro-white {
+            background-color: #e6eaed;
+            border: 1px solid #ddd;
+        }
+    </style>
+    <style type="text/css" id="core-notify">
+        .notifyjs-corner {
+            position: fixed;
+            margin: 5px;
+            z-index: 1050;
+        }
+
+        .notifyjs-corner .notifyjs-wrapper,
+        .notifyjs-corner .notifyjs-container {
+            position: relative;
+            display: block;
+            height: inherit;
+            width: inherit;
+            margin: 3px;
+        }
+
+        .notifyjs-wrapper {
+            z-index: 1;
+            position: absolute;
+            display: inline-block;
+            height: 0;
+            width: 0;
+        }
+
+        .notifyjs-container {
+            display: none;
+            z-index: 1;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        [data-notify-text],
+        [data-notify-html] {
+            position: relative;
+        }
+
+        .notifyjs-arrow {
+            position: absolute;
+            z-index: 2;
+            width: 0;
+            height: 0;
+        }
+    </style>
+</head>
+
+<body class="skin-red-light sidebar-mini fixed sidebar-collapse display_blocks_none_bottom sidebar-mini-expand-feature"
+    style="height: auto; min-height: 100%;">
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+        href="https://www.linea.pe/movil_app_beta/assets/bower_components/bootstrap/dist/css/bootstrap.min.css?v=0.0.0.001">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://www.linea.pe/movil_app_beta/assets/bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet"
+        href="https://www.linea.pe/movil_app_beta/assets/bower_components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="https://www.linea.pe/movil_app_beta/assets/dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet"
+        href="https://www.linea.pe/movil_app_beta/assets/dist/css/skins/_all-skins.min.css?v=0.0.0.001">
+    <!-- Date Picker -->
+    <link rel="stylesheet"
+        href="https://www.linea.pe/movil_app_beta/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <!-- Bootstrap time Picker -->
+    <link rel="stylesheet"
+        href="https://www.linea.pe/movil_app_beta/assets/plugins/timepicker/bootstrap-timepicker.min.css">
+    <!-- Bootstrap Datetime Picker -->
+    <link
+        href="https://www.linea.pe/movil_app_beta/assets/bower_components/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css"
+        rel="stylesheet">
+    <!-- daterange picker -->
+    <link rel="stylesheet"
+        href="https://www.linea.pe/movil_app_beta/assets/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+    <!-- bootstrap wysihtml5 - text editor -->
+
+    <!-- Switchery -->
+
+    <link href="https://www.linea.pe/movil_app_beta/assets/toggle/toggle.min.css?v=0.0.0.1" rel="stylesheet">
+    <!-- Notification -->
+    <link href="https://www.linea.pe/movil_app_beta/assets/bower_components/notifications/notification.css?v=0.0.0.1"
+        rel="stylesheet">
+    <!-- sweet alerts -->
+    <link href="https://www.linea.pe/movil_app_beta/assets/bower_components/sweet-alert/sweet-alert.min.css?v=0.0.0.001"
+        rel="stylesheet">
+    <!-- iCheck -->
+    <link href="https://www.linea.pe/movil_app_beta/assets/plugins/iCheck/all.css?v=0.0.0.1" rel="stylesheet">
+    <!-- Select 2 -->
+    <link href="https://www.linea.pe/movil_app_beta/assets/bower_components/select2/dist/css/select2.min.css?v=0.0.0.1"
+        rel="stylesheet">
+
+    <!-- DataTables -->
+    <link rel="stylesheet"
+        href="https://www.linea.pe/movil_app_beta/assets/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <!-- DataTables Responsive-->
+    <link href="https://www.linea.pe/movil_app_beta/assets/dataTables-responsive/css/responsive.dataTables.min.css"
+        rel="stylesheet">
+    <!-- footable -->
+    <link href="https://www.linea.pe/movil_app_beta/assets/footable/css/footable.core.min.css?v=0.0.01" rel="stylesheet"
+        media="all">
+    <!-- Google Font -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    <!-- Estilos extras-->
+    <link href="https://www.linea.pe/movil_app_beta/css/styles.css?v=0.0.0.0007" rel="stylesheet">
+    <link href="https://www.linea.pe/movil_app_beta/css/styles_responsive.css?v=0.0.0.001" rel="stylesheet">
+    <link href="https://www.linea.pe/movil_app_beta/css/check_radio.css?v=0.0.0.001" rel="stylesheet">
+    <link href="https://www.linea.pe/movil_app_beta/css/toolTip.css?v=0.0.0.1" rel="stylesheet">
+    <link href="https://www.linea.pe/movil_app_beta/css/style_2.css" rel="stylesheet">
+    <link href="https://www.linea.pe/movil_app_beta/css/formStyle.css" rel="stylesheet">
+    <!-- Iconos extras -->
+    <link rel="stylesheet" href="https://www.linea.pe/movil_app_beta/css/icofont/css/icofont.css?v=0.0.0.1">
+
+    <!-- JS Incluides -->
+    <!-- jQuery 3 -->
+    <script src="https://www.linea.pe/movil_app_beta/assets/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="https://www.linea.pe/movil_app_beta/assets/bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap -->
+    <script
+        src="https://www.linea.pe/movil_app_beta/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        var carpeta_ec = "ecommerce/";
+    </script>
+    <link rel="stylesheet" href="./css/resumen.css">
+    <div class="wrapper" style="height: auto; min-height: 100%;">
+
+        <header class="main-header hidden" style="">
+            <!-- Logo -->
+
+            <a href="javascript:void(0)" class="logo hidden-xs" data-href="">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini">
+                    <img src="https://www.linea.pe/movil_app_beta/imagenes/logo2.png" title="Transportes Linea">
+                </span>
+
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg">
+                    <img src="https://www.linea.pe/movil_app_beta/imagenes/logo_blanco.png" title="Transportes Linea"
+                        style="width: 120px">
+                </span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle hidden-xs" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+
+
+
+                        <!-- User Account -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="https://www.linea.pe/movil_app_beta/assets/dist/img/user.png"
+                                    class="user-image" alt="User Image">
+                                <span class="hidden-xs"></span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- menu principal -->
+        <aside class="main-sidebar" hidden="">
+            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 574px;">
+                <section class="sidebar" style="overflow: hidden; width: auto; height: 574px;">
+                    <ul class="sidebar-menu tree" data-widget="tree">
+                        <li class="header">MENÚ PRINCIPAL</li>
+                    </ul>
+                </section>
+                <div class="slimScrollBar"
+                    style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;">
+                </div>
+                <div class="slimScrollRail"
+                    style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;">
+                </div>
+            </div>
+
+        </aside>
+        <!-- fin menu principal -->
+
+        <!-- Contenido -->
+        <div class="content-wrapper" style="background-color: white; margin-left: 0px !important; min-height: 574px;">
+            <!-- Main content -->
+            <div id="imgModal" style="background-color: transparent; display: none;">
+
+
+                <i class="fa fa-circle-o-notch fa-spin color_blue" style="font-size: 100px; margin-top: 150px;"></i>
+
+            </div>
+
+            <style>
+                .text-danger {
+                    color: #dd4b39 !important;
+                }
+            </style>
+            <section>
+                <div class="result">
+                    <img src="./images/check.png" alt="">
+                    <p>SU COMPRA SE PROCESÓ SATISFACTORIAMENTE</p>
+                </div>
+                <div class="buy-resume">
+                    <p class="buy-resume__title">Resumen de compra</p>
+                    <ul class="detail-list">
+                        <li class="item-list">
+                            <label for="" class="item-list__title">N° de Operación</label>
+                            <p class="item-list__subtitle">4404918</p>
+                        </li>
+                        <li class="item-list">
+                            <label for="" class="item-list__title">Nombre del pagador</label>
+                            <p class="item-list__subtitle">CHRISTIAN FERRER</p>
+                        </li>
+                        <li class="item-list">
+                            <label for="" class="item-list__title">Medio de Pago</label>
+                            <p class="item-list__subtitle">TARJETA</p>
+                        </li>
+                        <li class="item-list">
+                            <label for="" class="item-list__title">N° de tarjeta</label>
+                            <p class="item-list__subtitle">447411******2240</p>
+                        </li>
+                        <li class="item-list">
+                            <label for="" class="item-list__title">Importe de la transacción</label>
+                            <p class="item-list__subtitle">S/ 190.00</p>
+                        </li>
+                        <li class="item-list">
+                            <label for="" class="item-list__title">Descripción</label>
+                            <p class="item-list__subtitle">1 boleto(s) para <strong>TRUJILLO-LIMA (ESPECIAL
+                                    1°PISO)</strong><br> Para: Lunes 18 de octubre del 2021 - Salida:
+                                8:30 pm</p>
+                            <p class="item-list__subtitle">1 boleto(s) para <strong>TRUJILLO-LIMA (ESPECIAL
+                                    1°PISO)</strong>
+                                <br> Para: Lunes 18 de octubre del 2021 - Salida: 8:30 pm
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <br>
+                <div class="text-below">
+                    <p>
+                        <span>Estimado(a) <strong>CHRISTIAN FERRER</strong>, después de procesado el
+                            pago, recibirá un correo electrónico con sus comprobantes de viaje.
+                        </span>
+                        <span class="color_red">El correo será enviado desde la cuenta
+                            <strong>no-reply@efact.pe</strong>, perteneciente a nuestro proveedor de
+                            emisión de comprobantes electrónicos <img
+                                src="https://www.linea.pe/movil_app/imagenes/efact.png" style="width: 70px;"></span>.
+                    </p>
+                    <p>Si no lo recibe, busque en su carpeta de correo no deseado o solicítelo llamando a nuestro Call
+                        Center: <strong> 0801-00-015</strong> <br>
+                        Recuerde que puede consultar nuestros términos y condiciones desde la opción "Condiciones y
+                        Requisitos de Viaje" o desde nuestra página web</p>
+                </div>
+                <div class="actions">
+                    <button class="action-button">Guardar como frecuente</button>
+                </div>
+            </section>
+            <section class="content">
+
+                <div class="">
+
+
+                    <div class="">
+
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12 p-bottom-20 p-top-10 hidden">
+                                <div class="text-center">
+                                    <i class="icofont-4x icofont-check-circled text-success"></i>
+
+                                    <h2 class="text-success p-top-10">SU COMPRA SE PROCESÓ SATISFACTORIAMENTE</h2>
+                                    <div class="text-success separator_auto-success"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12 p-bottom-20 p-top-10">
+                                <div class="box box-default box-solid">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">
+                                            <font class="text_height_2_3_title p-l-15">
+                                                RESUMEN DE COMPRA
+                                            </font>
+                                        </h3>
+                                    </div>
+                                    <div class="box-body" style="font-size: 14.5px; padding: 0px;">
+
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-6 col-sm-12 col-sm-12 p-top-10">
+                                            <div class="col-md-12"><label>N° de Operación:</label>
+                                                4404918<br><label>Nombre del pagador:</label> CHRISTIAN
+                                                FERRER<br><label>Medio de Pago:</label> TARJETA<br><label>N° de
+                                                    tarjeta:</label> 447411******2240<br><label>Importe de la
+                                                    transacción:</label> S/ 190.00<br><br><label>Descripción:</label>
+                                            </div>
+                                            <div class="col-md-12">1 boleto(s) para <strong>TRUJILLO-LIMA (ESPECIAL
+                                                    1°PISO)</strong><br>Para: Lunes 18 de octubre del 2021 - Salida:
+                                                8:30 pm</div>
+
+                                        </div>
+                                        <div class="col-md-12"></div>
+                                        <!-- --------------------------------------------------------------------------------------------------------- -->
+
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-6 col-sm-12 col-sm-12 p-bottom-30 p-top-10">
+
+                                            <p></p>
+                                            <div class="col-md-12">1 boleto(s) para <strong>LIMA-TRUJILLO (ESPECIAL
+                                                    1°PISO)</strong><br>Para: Jueves 21 de octubre del 2021 - Salida:
+                                                8:30 pm</div>
+                                            <p></p>
+
+                                        </div>
+                                        <div class="col-md-3"></div>
+
+
+
+                                        <div class="col-md-12 col-sm-12 col-xs-12 p-bottom-30 p-top-10 text-center h4">
+
+
+
+                                            <span>Estimado(a) <strong>CHRISTIAN FERRER</strong>, después de procesado el
+                                                pago, recibirá un correo electrónico con sus comprobantes de viaje.
+                                            </span>
+                                            <span class="color_red">El correo será enviado desde la cuenta
+                                                <strong>no-reply@efact.pe</strong>, perteneciente a nuestro proveedor de
+                                                emisión de comprobantes electrónicos <img src="../imagenes/efact.png"
+                                                    style="width: 70px;"></span>.
+
+                                            Si no lo recibe, busque en su carpeta de correo no deseado o solicítelo
+                                            llamando a nuestro Call Center: <strong
+                                                style="color: black;">0801-00-015</strong>
+                                            <br>
+
+
+                                            <span>Recuerde que puede consultar nuestros términos y condiciones desde la
+                                                opción "Condiciones y Requisitos de Viaje" o desde nuestra página
+                                                web</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modal Calificacion -->
+            <div style="overflow: hidden;position: fixed;left: 0; top: 190px;z-index: 9999; display: none;">
+                <button onclick="Calificar();" data-value="1" id="spCalificar" class="btn btn-promo btn_derecha"
+                    type="button" title="Califícanos">
+                    <i class="glyphicon glyphicon-thumbs-up fa-15x color_linea_azul"></i>
+                </button>
+            </div>
+
+            <div class="modal fade" id="modalCalificacion" tabindex="-1" role="dialog" data-backdrop="static"
+                data-keyboard="false" aria-labelledby="modalAlertaTitulo" style="display: none;">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+
+                            <h4 class="modal-title" id="modalCalificacionTitulo">Califícanos</h4>
+                        </div>
+                        <div class="modal-body" id="modalCalificacionBody">
+                            <label>¿Qué tan satisfecho estás con nuestro nuevo app?</label>
+                            <div>
+                                <span id="spCalificacion1" class="glyphicon glyphicon-star fa-Calificanos opacity_img"
+                                    aria-hidden="true" style="cursor: pointer;"></span>
+                                <span id="spCalificacion2" class="glyphicon glyphicon-star fa-Calificanos opacity_img"
+                                    aria-hidden="true" style="cursor: pointer;"></span>
+                                <span id="spCalificacion3" class="glyphicon glyphicon-star fa-Calificanos opacity_img"
+                                    aria-hidden="true" style="cursor: pointer;"></span>
+                                <span id="spCalificacion4" class="glyphicon glyphicon-star fa-Calificanos opacity_img"
+                                    aria-hidden="true" style="cursor: pointer;"></span>
+                                <span id="spCalificacion5" class="glyphicon glyphicon-star fa-Calificanos opacity_img"
+                                    aria-hidden="true" style="cursor: pointer;"></span>
+                            </div>
+                            <div id="msjCalificacion" class="control-label text-danger" hidden=""></div>
+                            <br>
+                            <div class="form-group">
+                                <label>Déjanos tu comentario</label>
+                                <textarea id="comentario" name="comentario" class="form-control" rows="6"
+                                    placeholder="Comentario" maxlength="60"></textarea>
+                                <span id="msjComentario" class="control-label text-danger" hidden=""></span>
+                            </div>
+                            <div id="rptaCalificacion"></div>
+                        </div>
+                        <div class="modal-footer">
+
+                            <button id="btnCalificarM" data-value="1" type="button" class="btn btn-success"
+                                style="/*background: unset;*/ border: unset;"
+                                onclick="calificar_app()">CALIFICAR</button>
+                            <button id="btnCancelar" data-value="0" type="button" class="btn btn-default color_blue"
+                                data-dismiss="modal" style="background: unset; border: unset;">CANCELAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="https://www.linea.pe/js/calificanos.js?v=0.0.0.001"></script>
+            <!-- Fin Modal Calificacion -->
+
+            <!-- Modal Condiciones de viaje -->
+            <div class="modal fade" id="modalCondicionesViaje" tabindex="-1" role="dialog" data-backdrop="true"
+                aria-labelledby="modalCondicionesViajeTitulo">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body modal-body-max-height" id="modalCondicionesViajeBody"
+                            style="padding: 0px;">
+                            <iframe id="frmCondicionesViaje" src="../../Terminos_Condiciones_Viaje.pdf"
+                                style="width: 100%; height: 300px;"></iframe>
+                        </div>
+                        <div class="modal-footer">
+
+                            <button type="button" class="btn btn-default color_blue" data-dismiss="modal"
+                                style="background: unset; border: unset;">CERRAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin Modal Condiciones de viaje -->
+
+            <script>
+                var transaccion = "4404918";
+                // $("#modalCalificacion").modal("show");
+
+                function VerCondicionesViaje() {
+                    //var pdfData_url = "https://www.linea.pe/Terminos_Condiciones_Viaje.pdf";
+                    /*var pdfData_url = "../../Terminos_Condiciones_Viaje.pdf";
+                    PDFView.pdfData_url = pdfData_url;
+                    cargarPDFViewer();
+                    $("#modalPDFViewer").modal("show");*/
+                }
+
+                function calificar_app() {
+                    $("#rptaCalificacion").html("").hide();
+                    $("#rptaCalificacion").removeClass("text-success");
+                    $("#rptaCalificacion").removeClass("text-danger");
+
+                    var arrTarInput = [valor_Calificacion];
+                    var arrTarMsjId = ["msjCalificacion"];
+                    var arrTarMsj = ["Seleccione un valor de estrella"];
+
+                    var bandera = validarFormulario(arrTarInput, arrTarMsjId, arrTarMsj);
+
+                    if (bandera) {
+                        deshabilitarBoton("btnCalificarM");
+                        if (isEmpty(miIP)) {
+                            $.ajax({
+                                url: "https://api.ipify.org/?format=jsonp",
+                                type: "POST",
+                                //data: JSON.stringify(params),
+                                //contentType: "application/json;charset=UTF-8",
+                                dataType: "jsonp",
+                                beforeSend: function () {
+                                    //deshabilitarBoton("btnCalificarM");
+                                },
+                                success: function (result) {
+                                    if (!isEmpty(result)) {
+                                        miIP = result.ip;
+                                        //console.log("guardar", miIP);
+                                        guardarCalificacionApp();
+                                    } else {
+
+                                    }
+                                },
+                                error: function (errormessage) {
+                                    habilitarBoton("btnCalificarM");
+                                    $("#rptaCalificacion").html("Error al Guardar datos. Por favor inténtelo nuevamente.").show();
+                                    $("#rptaCalificacion").addClass("text-danger");
+                                    //console.log("Error");
+                                }
+                            });
+                        } else {
+                            //console.log("guardar");
+                            guardarCalificacionApp();
+                        }
+                    } else {
+                        $("#rptaCalificacion").addClass("text-danger");
+                    }
+
+                }
+                function guardarCalificacionApp() {
+                    var params = {
+                        calificacion: {
+                            Valor: valor_Calificacion,
+                            Ip: miIP,
+                            Opinion: ($("#comentario").val() + "|5"),
+                            Transaccion: (isEmpty(transaccion) ? "0" : transaccion)
+                        }
+                    };
+
+                    var url_calificaion = "";
+                    var URL = window.location;
+
+                    if (!isEmpty(URL)) {
+                        /*if (URL.href.match(/app_success/g)) {
+                            url_calificaion = "../";
+                        }*/
+                    }
+
+                    $.ajax({
+                        url: url_calificaion + "app_success.aspx/GuardarCalificacionMovil",
+                        type: "POST",
+                        data: JSON.stringify(params),
+                        contentType: "application/json;charset=UTF-8",
+                        dataType: "json",
+                        beforeSend: function () {
+
+                        },
+                        success: function (result) {
+                            var respuesta = result.d;
+                            if (!isEmpty(respuesta)) {
+                                habilitarBoton("btnCalificarM");
+
+                                switch (respuesta) {
+                                    case "0":
+                                        $("#rptaCalificacion").html("Gracias por su calificación.").show();
+                                        $("#rptaCalificacion").addClass("text-success");
+                                        LimpiarCalificacion();
+
+                                        $("#btnCalificar").hide();
+
+                                        setTimeout(function () {
+                                            $("#modalCalificacion").modal("hide");
+                                            $("#rptaCalificacion").html("").hide();
+
+                                        }, 2000);
+
+                                        break;
+                                    case "calicado":
+                                        $("#rptaCalificacion").html("Estimado usuario, usted ya nos ha calificado. Gracias.").show();
+                                        $("#rptaCalificacion").addClass("text-success");
+                                        break;
+                                    default:
+                                        $("#rptaCalificacion").html("Error al Guardar datos. Por favor inténtelo nuevamente.").show();
+                                        $("#rptaCalificacion").addClass("text-danger");
+                                        break;
+                                }
+                            }
+
+                        },
+                        error: function (errormessage) {
+                            habilitarBoton("btnCalificarM");
+                            $("#rptaCalificacion").html("Error al Guardar datos. Por favor inténtelo nuevamente.").show();
+                            $("#rptaCalificacion").addClass("text-danger");
+                            //console.log("Error");
+                        }
+                    });
+                }
+            </script>
+
+        </div>
+        <!-- Fin Contenido -->
+
+        <!-- Footer -->
+
+        <!-- Fin Footer -->
+    </div>
+
+
+    <div id="modalCerrarSesion" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="true">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <img class="imgcentrado" src="https://www.linea.pe/movil_app_beta/imagenes/precarga.gif">
+                            <h3><b>Cerrando sesión...</b></h3>
+                            <h4>Gracias por su visita</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Mensaje -->
+    <div class="modal fade" id="modalMensaje" tabindex="-1" role="dialog" data-backdrop="true"
+        aria-labelledby="modalMensajeTitulo">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+
+                    <h4 class="modal-title" id="modalMensajeTitulo">Mensaje</h4>
+                </div>
+                <div class="modal-body modal-body-max-height" id="modalMensajeBody">
+
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-default color_blue" data-dismiss="modal"
+                        style="background: unset; border: unset;">ACEPTAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal Mensaje -->
+
+    <!-- Modal Cargando -->
+    <div class="modal fade" id="modalCargando" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" id="modalCargandoHeader" hidden="">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="glyphicon glyphicon-remove"></span>
+                    </button>
+                    <h4 class="modal-title" id="modalCargandoTitulo">Mensaje</h4>
+                </div>
+                <div class="modal-body" id="modalCargandoBody">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <img id="modalCargandoLoading" class="imgcentrado"
+                                src="https://www.linea.pe/movil_app_beta/imagenes/precarga.gif">
+                            <h3 id="spModalCargandoMsj" style="font-weight: bold;"></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" id="modalCargandoFooter" hidden="">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal Cargando -->
+
+    <!-- Modal PDF Viewer -->
+    <div class="modal fade" id="modalPDFViewer" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body modal-body-max-height" id="modalPDFViewerBody" style="padding: 0px;">
+                    <div class="col-md-12 col-xs-12">
+                        <div class="fixed-action-zoom_controls_pdf">
+                            <button class="btn" onclick="ZoomPDFView('-')">
+                                <i class="fa fa-minus text-info "></i>
+                            </button>
+                            <button class="btn" onclick="ZoomPDFView('+')">
+                                <i class="fa fa-plus text-info"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="canvas_container" class=""
+                        style="background: #333; text-align: center; border: solid 3px; overflow-y: auto;">
+                        <canvas id="canvasPDFViewer"></canvas>
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-default color_blue" data-dismiss="modal"
+                        style="background: unset; border: unset;">CERRAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal PDF Viewer -->
+
+
+
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button);
+
+        var meses_es = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        var meses_en = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var dias_es = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+        var dias_en = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+        $(window).on("scroll", function () {
+            var div_timer = $("#divTimer");
+            if (div_timer.length > 0) {
+                var scroll_timer = 40;
+                if ($(window).scrollTop() > scroll_timer) {
+                    $(div_timer[0]).css({
+                        "position": "fixed",
+                        "top": "0px",
+                        "z-index": "9",
+                        "background": "white",
+                        "padding": "5px 0px",
+                    });
+                } else {
+                    $(div_timer[0]).css({
+                        "position": "",
+                        "top": "",
+                        "z-index": "",
+                        "background": "",
+                        "padding": "",
+                    });
+                }
+            }
+
+            var div_precio_pisos = $(".div_select_precios");
+            var div_pasos_pas = $("#divPaso");
+            if (div_pasos_pas.length > 0) {
+                var scroll_timer = 40;
+                if ($(window).scrollTop() > scroll_timer && div_precio_pisos.length == 0) {
+                    $(div_pasos_pas[0]).css({
+                        "position": "fixed",
+                        "top": "0px",
+                        "z-index": "8",
+                        "background": "white",
+                        "padding-bottom": "5px",
+                        "padding-top": "5px",
+                    });
+                } else {
+                    $(div_pasos_pas[0]).css({
+                        "position": "",
+                        "top": "",
+                        "z-index": "",
+                        "background": "",
+                        "padding-bottom": "",
+                        "padding-top": "",
+                    });
+                }
+            }
+        });
+
+        function getFechaActual(formato, language, date) {
+            var fecha = new Date();
+            if (!isEmpty(date)) {
+                fecha = new Date(date);
+            }
+            var mes_index = fecha.getMonth();
+            var dia_index = (fecha.getDay() == 0 ? 7 : fecha.getDay());
+
+            fecha.setMonth(fecha.getMonth() + 1);
+
+            var dia = fecha.getDate();
+            dia = replaceCero(dia, 2);
+
+            var mes = fecha.getMonth();
+            var anio = fecha.getFullYear();
+
+            var hora = fecha.getHours();
+            var min = fecha.getMinutes();
+            var sec = fecha.getSeconds();
+
+            var nombre_mes = "";
+            var nombre_dia = "";
+
+            if (language == "es") {
+                nombre_dia = dias_es[dia_index - 1];
+                nombre_mes = meses_es[mes_index];
+            } else {
+                nombre_dia = dias_en[dia_index - 1];
+                nombre_mes = meses_en[mes_index];
+            }
+
+            var fecha_format = "";
+            switch (formato) {
+                //Fecha y tiempo simple
+                case "dd":
+                    fecha_format = dia;
+                    break;
+                case "mmm":
+                    fecha_format = mes;
+                    break;
+                case "yy":
+                    fecha_format = replaceCero(anio, 2);
+                    break;
+                case "yyyyy":
+                    fecha_format = anio;
+                    break;
+                case "hh:mm":
+                    fecha_format = replaceCero(hora, 2) + ":" + replaceCero(min, 2)
+                    break;
+                case "hh:mm:ss":
+                    fecha_format = replaceCero(hora, 2) + ":" + replaceCero(min, 2) + ":" + replaceCero(sec, 2);
+                    break;
+                case "HH:mm":
+                    var ampm = hora >= 12 ? 'pm' : 'am';
+                    hora = hora % 12;
+                    fecha_format = replaceCero(hora, 2) + ':' + replaceCero(min, 2) + ' ' + ampm;
+
+                    break;
+                case "HH:mm:ss":
+                    var ampm = hora >= 12 ? 'pm' : 'am';
+                    hora = hora % 12;
+                    fecha_format = replaceCero(hora, 2) + ':' + replaceCero(min, 2) + ":" + replaceCero(sec, 2) + ' ' + ampm;
+
+                    break;
+                case "dd-mm-yy":
+                    fecha_format = dia + "-" + replaceCero(mes, 2) + "-" + replaceCero(anio, 2);
+                    break;
+                case "dd-mm-yyyy":
+                    fecha_format = dia + "-" + replaceCero(mes, 2) + "-" + anio;
+                    break;
+                case "yyyy-mm-dd":
+                    fecha_format = anio + "-" + replaceCero(mes, 2) + "-" + dia;
+                    break;
+                case "dd/mm/yy":
+                    fecha_format = dia + "/" + replaceCero(mes, 2) + "/" + replaceCero(anio, 2);
+                    break;
+                case "dd/mm/yyyy":
+                    fecha_format = dia + "/" + replaceCero(mes, 2) + "/" + anio;
+                    break;
+                //Nombre meses
+                case "DD-MM-YYYY":
+                    fecha_format = dia + ' ' + nombre_mes + ' ' + anio;
+                    break;
+                case "DD-MM-YYYY de":
+                    fecha_format = dia + ' de ' + nombre_mes + ' del ' + anio;
+                    break;
+                case "Dd":
+                    fecha_format = nombre_dia.substr(0, 3);
+                    break;
+                case "DD":
+                    fecha_format = nombre_dia;
+                    break;
+                case "Mm":
+                    fecha_format = nombre_mes.substr(0, 3);
+                    break;
+                case "MM":
+                    fecha_format = nombre_mes;
+                    break;
+                default:
+                    fecha_format = dia + "/" + replaceCero(mes, 2) + "/" + anio;
+                    break;
+            }
+
+            return fecha_format;
+        }
+
+        function replaceCero(num, size) {
+            return ('000000000' + num).substr(-size);
+        }
+
+        function activarDropdownList(object, lblTextId) {
+            var idOpciones = $(object).parent().parent();
+            var input_padre = $(idOpciones).attr("aria-labelledby");
+            idOpciones = idOpciones[0].id;
+            var opciones = $("#" + idOpciones + " >li");
+            var opId = $(object).data().op;
+
+            for (var i = 0; i < opciones.length; i++) {
+                if ($(opciones[i]).hasClass("active")) {
+                    $(opciones[i]).removeClass("active");
+                    $(opciones[i]).find("a").removeClass("bg_red");
+                }
+            }
+
+            if (!isEmpty(opId)) {
+                $("[data-op='" + opId + "']").addClass("bg_red");
+                $("[data-op='" + opId + "']").parent().addClass("active");
+                var accion = $(object).html();
+
+                var valor_origen = $("[data-op='" + opId + "']").data().valor;
+                $("#" + input_padre).data().valor = valor_origen;
+
+                if (!isEmpty(accion)) {
+                    $("#spNombreAccion_" + input_padre).html(accion);
+                } else {
+                    $("#spNombreAccion_" + input_padre).html("Seleccione");
+                }
+
+                if (!isEmpty(lblTextId)) {
+                    $("#" + lblTextId).html(valor_origen.substr(0, 3));
+                }
+            }
+        }
+
+        function LlenarDropdownList(inputId, valor, texto, data, placeholder, opId, labelId) {
+            //"txtOrigen", "Origen", "Mostrar", result.d, "Origen"
+            document.getElementById("Op_" + inputId).innerHTML = "";
+            labelId = (isEmpty(labelId)) ? "" : labelId;
+
+            var html_op = '<a data-op="op00" data-valor="" href="javascript:void(0);" class="bg_red" onclick="activarDropdownList(this,\'' + labelId + '\');" style="white-space: normal;">';
+
+            $("#Op_" + inputId).append('<li class="active">' + html_op + placeholder + "</a></li>");
+            if (!isEmpty(data)) {
+                $.each(data, function (index, x) {
+                    html_op = '<a data-op="op' + opId + index + '" data-valor="' + x[valor] + '" href="javascript:void(0);" class="" onclick="activarDropdownList(this,\'' + labelId + '\');" style="white-space: normal;">';
+                    $("#Op_" + inputId).append('<li class="">' + html_op + x[texto] + "</a></li>");
+                });
+            }
+        }
+
+        function LlenarListOD(inputId, valor, texto, data, placeholder, opId, labelId, NomCorto) {
+            //"txtOrigen", "Origen", "Mostrar", result.d, "Origen"
+            document.getElementById("Op_" + inputId).innerHTML = "";
+
+            var html = '<table id="tb' + labelId + '" class="table table-hover" style="font-size: initial;">'
+                + '<tbody>'
+                ;
+
+            if (!isEmpty(data)) {
+                $.each(data, function (index, x) {
+                    html += '<tr class="cursor_pointer" onclick="activarListaOD(this,\'' + labelId + '\');" data-op="op' + opId + index + '" data-valor="' + x[valor] + '" data-nom_corto="' + x[NomCorto] + '" data-texto="' + x[texto] + '">'
+                        + '<td style="border-top: unset;">' + x[texto] + '</td>'
+                        + '</tr>'
+                        ;
+                });
+            }
+            html += '</tbody>'
+                + '</table>';
+            $("#Op_" + inputId).html(html);
+        }
+
+        function abrirCalendario(id) {
+            $('#' + id).click();
+        }
+
+        function ScrollTop(valor) {
+            $("html,body").animate({ scrollTop: valor }, { duration: "slow" });
+        }
+
+        function reestructurarDT_Responsive(object, info, paging, lenghtMenu, searching) {
+            var id = object.dataset.idtable;
+            var colum_order = object.dataset.colum_order;
+            var order_by = object.dataset.order_by;
+            var no_visiblle = object.dataset.no_visiblle;
+            var valor_visible = true;
+
+            if (isEmpty(colum_order)) colum_order = "0";
+            if (isEmpty(order_by)) order_by = "asc";
+            if (!isEmpty(no_visiblle)) valor_visible = false;
+
+            if (isEmpty(info)) info = false;
+            if (isEmpty(paging)) paging = false;
+            if (isEmpty(lenghtMenu)) lenghtMenu = false;
+            if (isEmpty(searching)) searching = false;
+
+            setTimeout(function () {
+                $('#' + id).dataTable({
+                    //"dom": '<"top"><"toolbar">rt<"bottom"<"col-md-3"l><"col-md-9"p><"col-md-12"i>><"clear">',
+                    "dom": '<lf<t>ip>',
+                    "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Todos"]],
+                    responsive: true,
+                    //"order": [[1, "desc"]],
+                    "order": [[colum_order, order_by]],
+                    "language": dtLanguage,
+                    "info": info,
+                    "paging": paging,
+                    "lenghtMenu": lenghtMenu,
+                    "searching": searching,
+                    columnDefs: [
+                        {
+                            searchable: false,
+                            visible: valor_visible,
+                            orderable: false,
+                            targets: [0]
+                        }
+                    ],
+                    "destroy": true
+                });
+
+                $("[type=search]").val("");
+            }, 500);
+        }
+
+        var PDFView = {
+            pdf: null,
+            currentPage: 1,
+            zoom: 1,
+            pdfData_url: "", //url: https://www.google.com/file.pdf ; {data: atob(data64)} 
+
+        }
+        function cargarPDFViewer() {
+            var loadingTask = pdfjsLib.getDocument(PDFView.pdfData_url);
+            loadingTask.promise.then(function (pdf) {
+                //console.log('PDF loaded');
+
+                pdf.getPage(PDFView.currentPage).then(function (page) {
+                    //console.log('Page loaded');
+                    var viewport = page.getViewport({ scale: PDFView.zoom });
+
+                    // Prepare canvas using PDF page dimensions
+                    var canvas = document.getElementById('canvasPDFViewer');
+                    var context = canvas.getContext('2d');
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+
+                    // Render PDF page into canvas context
+                    var renderContext = {
+                        canvasContext: context,
+                        viewport: viewport
+                    };
+                    var renderTask = page.render(renderContext);
+                    renderTask.promise.then(function () {
+                        //console.log('Page rendered');
+                    });
+                });
+            }, function (reason) {
+                // PDF loading error
+                //console.error(reason);
+            });
+        }
+
+        function ZoomPDFView(valor) {
+            if (valor == "+") {
+                PDFView.zoom += 0.25;
+                cargarPDFViewer();
+            }
+            if (valor == "-") {
+                if (PDFView.zoom > 0.5) {
+                    PDFView.zoom -= 0.25;
+                    cargarPDFViewer();
+                }
+            }
+        }
+
+        function cargarComponentesMaster() {
+            $(".select2").select2();
+            SetNamePestañaTab();
+            activarToolTips();
+            $('.js-switch').bootstrapToggle();
+        }
+
+        function calculateAge(birthday) {
+            var birthday_arr = birthday.split("/");
+            var birthday_date = new Date(birthday_arr[2], birthday_arr[1] - 1, birthday_arr[0]);
+            var ageDifMs = Date.now() - birthday_date.getTime();
+            var ageDate = new Date(ageDifMs);
+            return Math.abs(ageDate.getUTCFullYear() - 1970);
+        }
+    </script>
+
+    <!-- daterangepicker -->
+    <script src="https://www.linea.pe/movil_app_beta/assets/bower_components/moment/min/moment.min.js"></script>
+    <script
+        src="https://www.linea.pe/movil_app_beta/assets/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- DataTables -->
+    <script
+        src="https://www.linea.pe/movil_app_beta/assets/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script
+        src="https://www.linea.pe/movil_app_beta/assets/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <!-- DataTables Responsive-->
+    <script
+        src="https://www.linea.pe/movil_app_beta/assets/dataTables-responsive/js/dataTables.responsive.min.js"></script>
+    <!-- datepicker -->
+    <script
+        src="https://www.linea.pe/movil_app_beta/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script
+        src="https://www.linea.pe/movil_app_beta/assets/bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.es.min.js"></script>
+    <!-- Bootstrap Datetime Picker -->
+    <script
+        src="https://www.linea.pe/movil_app_beta/assets/bower_components/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <!-- bootstrap time picker -->
+    <script src="https://www.linea.pe/movil_app_beta/assets/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <!-- Switchery -->
+
+    <script src="https://www.linea.pe/movil_app_beta/assets/toggle/toggle.min.js?v=0.0.0.1"></script>
+    <!-- Notificaciones -->
+    <script
+        src="https://www.linea.pe/movil_app_beta/assets/bower_components/notifications/notify.min.js?v=0.0.0.1"></script>
+    <script
+        src="https://www.linea.pe/movil_app_beta/assets/bower_components/notifications/notify-metro.js?v=0.0.0.1"></script>
+    <script
+        src="https://www.linea.pe/movil_app_beta/assets/bower_components/notifications/notifications.js?v=0.0.0.1"></script>
+    <!-- sweet alerts -->
+    <script
+        src="https://www.linea.pe/movil_app_beta/assets/bower_components/sweet-alert/sweet-alert.min.js?v=0.0.0.1"></script>
+    <!-- iCheck 1.0.1 -->
+    <script src="https://www.linea.pe/movil_app_beta/assets/plugins/iCheck/icheck.min.js"></script>
+    <!-- Select 2 -->
+    <script
+        src="https://www.linea.pe/movil_app_beta/assets/bower_components/select2/dist/js/select2.full.min.js"></script>
+
+    <!-- InputMask -->
+    <script src="https://www.linea.pe/movil_app_beta/assets/plugins/input-mask/jquery.inputmask.js"></script>
+    <script
+        src="https://www.linea.pe/movil_app_beta/assets/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+    <script src="https://www.linea.pe/movil_app_beta/assets/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+    <!-- Bootstrap WYSIHTML5 -->
+
+    <!-- Slimscroll -->
+    <script
+        src="https://www.linea.pe/movil_app_beta/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <!--<script src="https://www.linea.pe/movil_app_beta/assets/bower_components/fastclick/lib/fastclick.js"></script>-->
+    <!-- AdminLTE App -->
+    <script src="https://www.linea.pe/movil_app_beta/assets/dist/js/adminlte.min.js"></script>
+    <!-- footable -->
+    <script src="https://www.linea.pe/movil_app_beta/assets/footable/footable.min.js"></script>
+
+
+    <!-- Funciones generales -->
+    <script charset="us-ascii" src="https://www.linea.pe/movil_app_beta/js/utils/utils.js?v0.0.0.001"></script>
+    <script src="https://www.linea.pe/movil_app_beta/js/utils/master_page.js?v=0.0.0.0002"></script>
+
+    <!-- PDF VIEW JS -->
+    <script src="https://www.linea.pe/movil_app_beta/js/pdfjs-dist/build/pdf.js"></script>
+
+
+
+</body>
+
+</html>

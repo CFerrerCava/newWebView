@@ -1,0 +1,60 @@
+:root {
+  /*fonts*/
+  --font--family: "Poppins", sans-serif;
+  /*colors*/
+  --color-white-linea: #ffffff;
+  --color-blue-linea: #347cbe;
+  --color-light-blue-linea: #649bce;
+  --color-body-linea: #fcfcfc;
+  --color-card-shadow: #6f6f6f1e;
+  --color-card-subTitle: #959595;
+  --color-card-title: #333333;
+  --color-red-linea: #be3434;
+  --colo-info-type: #6b6b6b;
+  --color-black-A: #404040;
+  --color-gray-A: #8e8e8e;
+  --color-gray-B: #5a5a5a;
+  --color-gray-C: #f3f3f3;
+  --color-gray-D: #c9c9c9;
+  --color-gray-E: #9d9d9d;
+  --color-gray-F: #e8e8e8;
+  --color-icon: #b5b5b5;
+}
+
+body {
+  padding: 25px 15px;
+  font-family: var(--font--family);
+  background-color: var(--color-body-linea);
+  row-gap: 25px;
+}
+.custom-input {
+  border: none;
+  border-bottom: solid 0.5px rgb(150, 150, 150);
+  height: 47px;
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+  font-family: var(--font--family);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color-black-A);
+}
+.form-group {
+  display: grid;
+  row-gap: 25px;
+  padding: 15px 5px;
+}
+.with-icon {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+.with-icon_B {
+  align-items: center;
+  column-gap: 15px;
+  padding: 15px;
+}
+.with-icon i {
+  color: var(--color-icon);
+  font-size: 24px;
+}

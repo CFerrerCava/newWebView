@@ -46,7 +46,7 @@ body {
   display: block;
 }
 /*card-item*/
-.itinerary__main--card-item {
+.itinerary__main--card-item-flats {
   margin: 12.5px 0px;
   display: flex;
   align-items: center;
@@ -57,7 +57,7 @@ body {
   text-decoration: none;
   list-style-type: none;
 }
-.main__card-item {
+.main__card-item-flats {
   border-radius: 10px;
   padding: 0px 20px;
   box-shadow: var(--color-card-shadow) 0px 4px 6px 0px;

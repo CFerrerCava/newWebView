@@ -1,0 +1,81 @@
+:root {
+  /*fonts*/
+  --font--family: "Poppins", sans-serif;
+  /*colors*/
+  --color-white-linea: #ffffff;
+  --color-blue-linea: #347cbe;
+  --color-body-linea: #fcfcfc;
+  --color-card-shadow: #6f6f6f1e;
+  --color-card-subTitle: #959595;
+  --color-card-title: #333333;
+  --color-red-linea: #be3434;
+  --colo-info-type: #6b6b6b;
+  --color-black-A: #404040;
+  --color-gray-A: #8e8e8e;
+  --color-gray-B: #5a5a5a;
+  --color-gray-C: #f3f3f3;
+  --color-gray-D: #c9c9c9;
+  --color-gray-E: #9d9d9d;
+  --color-gray-F: #e8e8e8;
+}
+
+body {
+  padding: 25px 25px;
+  font-family: var(--font--family);
+  background-color: var(--color-body-linea);
+  row-gap: 25px;
+}
+.result {
+  display: grid;
+  row-gap: 25px;
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--color-black-A);
+  text-align: center;
+  justify-items: center;
+  padding: 50px 0px;
+}
+
+.buy-resume {
+  display: grid;
+  row-gap: 15px;
+}
+.buy-resume__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-black-A);
+}
+.detail-list {
+  padding: 0px;
+  display: grid;
+  row-gap: 15px;
+}
+.item-list {
+  display: grid;
+  row-gap: 5px;
+}
+.item-list__title {
+  font-size: 12;
+  font-weight: 500;
+  color: var(--color-gray-A);
+}
+.item-list__subtitle {
+  font-size: 14;
+  font-weight: 400;
+  color: var(--color-black-A);
+}
+
+.text-below {
+  text-align: justify;
+}
+.actions {
+  padding: 15px 0px;
+}
+.action-button {
+  border: none;
+  background-color: var(--color-blue-linea);
+  padding: 15px 15px;
+  width: 100%;
+  color: var(--color-white-linea);
+  font-weight: 700;
+}

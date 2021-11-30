@@ -1,0 +1,56 @@
+:root {
+  --var-color-blue: #347cbe;
+}
+.form-2__container {
+  padding: 25px;
+  row-gap: 15px;
+  justify-content: start;
+}
+
+.form-2__container-in {
+  padding: 10px 0px;
+  column-gap: 10px;
+  justify-content: start;
+  display: flex;
+}
+
+.form-2__user--section {
+  padding: 15px;
+  row-gap: 25px;
+  justify-content: start;
+}
+
+.form-2__items-category {
+  border: 2px;
+  border-radius: 15%;
+  display: flex;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: rgb(214, 214, 214);
+}
+.form-2__items-category .to-select {
+  color: #333333 !important;
+  background-color: white !important;
+}
+.icon-select {
+  background-color: var(--var-color-blue);
+  color: white;
+  font-size: 15px;
+}
+.icon-select .remove {
+  background-color: #cdcdcd !important;
+}
+.form-2__items-category .active {
+  background-color: var(--var-color-blue);
+}
+.form-2__items-category:hover {
+  box-shadow: rgb(214, 214, 214);
+}
+
+.form-2__action {
+  color: #959595;
+  font-size: 13;
+  font-weight: 400;
+  text-decoration: underline;
+}
