@@ -21,9 +21,16 @@
 
 body {
   padding: 25px 15px !important;
-  font-family: var(--font--family) !important;
+
   background-color: var(--color-body-linea) !important;
   row-gap: 25px !important;
+}
+
+.body {
+  font-family: var(--font--family) !important;
+}
+.body-2 {
+  font-family: "Cabin", sans-serif;
 }
 
 /*header*/
@@ -61,7 +68,7 @@ body {
   list-style-type: none;
 } */
 .itinerary__main--card-item {
-  font-family: var(--font--family) !important;
+  /* font-family: var(--font--family) !important; */
   /*margin: 12.5px 0px;*/
   display: flex;
   align-items: center;
@@ -71,7 +78,7 @@ body {
 }
 
 .main__card-item {
-  font-family: var(--font--family) !important;
+  /* font-family: var(--font--family) !important; */
   border-radius: 10px 0px 0px 0px;
   padding: 10px 10px;
   border: solid 0.5px var(--color-gray-C);
@@ -82,7 +89,7 @@ body {
 }
 
 .card-selected {
-  font-family: var(--font--family) !important;
+  /* font-family: var(--font--family) !important; */
   color: var(--color-white-linea) !important;
   background-color: var(--color-blue-linea) !important;
   box-shadow: var(--color-card-shadow) 0px 4px 6px 0px;
@@ -103,27 +110,27 @@ body {
 }
 
 .card-disabled {
-  font-family: var(--font--family) !important;
+  /* font-family: var(--font--family) !important; */
   color: var(--color-gray-C) !important;
   background-color: var(--color-gray-C) !important;
 }
 
 .main__card-item--title {
-  font-family: var(--font--family) !important;
+  /* font-family: var(--font--family) !important; */
   font-size: 10px;
   font-weight: 500;
   color: var(--color-card-title);
 }
 
 .title-selected {
-  font-family: var(--font--family) !important;
+  /* font-family: var(--font--family) !important; */
   font-size: 10px;
   font-weight: 600;
   color: var(--color-white-linea);
 }
 
 .main__card-item--subTitle {
-  font-family: var(--font--family) !important;
+  /* font-family: var(--font--family) !important; */
   font-size: 10px;
   font-weight: 600;
   color: var(--color-card-subTitle);
@@ -219,7 +226,7 @@ body {
 
 /*Cards*/
 .cards {
-  font-family: var(--font--family) !important;
+  /* font-family: var(--font--family) !important; */
   display: grid;
   padding: 20px 20px;
   border-radius: 15px;
@@ -630,11 +637,13 @@ Full screen Modal
 }
 .icon-services {
   display: grid;
-  row-gap: 2px;
-  font-size: 5px;
+  row-gap: 5px;
+  font-size: 7.5px;
+  color: #8e8e8e;
   font-weight: 500;
   justify-content: center;
   text-align: center;
+  justify-items: center;
 }
 .vertical-line {
   width: 100%;
